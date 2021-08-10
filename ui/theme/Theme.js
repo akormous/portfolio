@@ -9,7 +9,7 @@ const h6 = {
 }
 const body1 = {
   fontWeight: 600,
-  fontSize: '0.7rem'
+  fontSize: '0.75rem'
 }
 
 /* Dark Theme */

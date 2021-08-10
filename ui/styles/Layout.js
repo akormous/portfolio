@@ -5,6 +5,6 @@ export const useStyles = makeStyles((theme) => ({
         background: theme.palette.primary.component,
         height: '100vh',
         borderRadius: 0,
-        marginTop: '66.5px'
+        marginTop: '66.5px',
     }
 }));

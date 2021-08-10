@@ -9,7 +9,6 @@ export default function Home() {
         <title>Akshat Chauhan</title>
         <meta name='keywords' content='programming, entertainment' />
       </Head>
-      <h1>Yo guys, i am a pro gamer</h1>
     </div>
   )
 }

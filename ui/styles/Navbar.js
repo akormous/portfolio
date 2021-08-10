@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
+    /*
+    AppBar
+    */
     root: {
         background: theme.palette.primary.background,
         color: theme.palette.primary.main,
@@ -8,9 +11,15 @@ export const useStyles = makeStyles((theme) => ({
         height: '66.5px',
         justifyContent: 'flex-end',
     },
+    /*
+    Grid container
+    */
     gridContainer: {
         justifyContent: 'center'
     },
+    /*
+    Links (horizontal)
+    */
     links: {
         paddingTop: '0px',
         paddingBottom: '0px',
@@ -19,6 +28,15 @@ export const useStyles = makeStyles((theme) => ({
             justifyContent: 'center',
             alignItems: 'center',
         },
+    },
+    normalLinks: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        paddingTop: '0px',
+        paddingBottom: '0px',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        }
     },
     linkButton: {
         display: 'flex',
@@ -33,29 +51,49 @@ export const useStyles = makeStyles((theme) => ({
             borderBottomColor: theme.palette.secondary.main
         }
     },
-    linkButtonText: {
-        fontWeight: 200,
-        fontSize: '0.8rem',
-    },
-    normalLinks: {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        paddingTop: '0px',
-        paddingBottom: '0px',
-        [theme.breakpoints.down('sm')]: {
-            display: 'none',
-        }
-    },
-    menuButton: {
+    /*
+    Drawer
+    */
+    drawerButton: {
         display: 'flex',
         justifyContent: 'center',
         paddingTop: '0px',
         paddingBottom: '10px',
         maxWidth: '60px',
+        //minWidth: '0px',
         [theme.breakpoints.up('md')]: {
             display: 'none',
+            width: '0px'
         },
     },
+    drawer: {
+        [theme.breakpoints.up('md')]: {
+            display: 'none',
+        }
+    },
+    drawerPaper: {
+        background: theme.palette.primary.background,
+        width: 200,
+    },
+    /*
+    Links in Drawer
+    */
+    menuButton: {
+        color: theme.palette.primary.main,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 'auto',
+        height: theme.spacing(6),
+        borderBottom: '1px solid',
+        borderBottomColor: theme.palette.primary.background,
+        '&:hover': {
+            borderBottomColor: theme.palette.secondary.main
+        }
+    },
+    /*
+    Theme toggle
+    */
     themeButton: {
         display: 'flex',
         justifyContent: 'center',
@@ -66,7 +104,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     themeIcon: {
         color: theme.palette.primary.main,
-        fontSize: 'large',
+        fontSize: '20px',
         '&:hover': {
             color: theme.palette.secondary.main
         }
