@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# large mp4 files are not worth pushing to remote if you are not deploying
+*.mp4
