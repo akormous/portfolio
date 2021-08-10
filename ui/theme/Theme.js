@@ -1,8 +1,13 @@
 /* All themes are defined here */
-import {createTheme} from '@material-ui/core/styles';
+import {createTheme, responsiveFontSizes} from '@material-ui/core/styles';
 
+const h1 = {
+  fontWeight: 700,
+
+}
 const h4 = {
-  fontWeight: 600
+  fontWeight: 600,
+  fontStyle: 'italic'
 }
 const h6 = {
   fontWeight: 400
@@ -13,7 +18,7 @@ const body1 = {
 }
 
 /* Dark Theme */
-export const darkTheme = createTheme({
+export let darkTheme = createTheme({
     palette: {
         type: "dark",
         primary: {
@@ -44,12 +49,13 @@ export const darkTheme = createTheme({
             ].join(','),
             h6: h6,
             h4: h4,
+            h1: h1,
             body1: body1,
       }
 })
 
 /* Light Theme */
-export const lightTheme = createTheme({
+export let lightTheme = createTheme({
     palette: {
       type: "light",
       primary: {
@@ -80,6 +86,10 @@ export const lightTheme = createTheme({
         ].join(','),
         h6: h6,
         h4: h4,
+        h1: h1,
         body1: body1,
     }
 });
+
+darkTheme = responsiveFontSizes(darkTheme);
+lightTheme = responsiveFontSizes(lightTheme);
