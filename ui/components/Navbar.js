@@ -5,6 +5,7 @@ import { useStyles } from '../styles/Navbar.js';
 /* Importing icons */
 import Brightness7SharpIcon from '@material-ui/icons/Brightness7Sharp';
 import NightStaySharpIcon from '@material-ui/icons/NightsStay';
+import MenuSharpIcon from '@material-ui/icons/MenuSharp';
 
 const Navbar = () => {
     const classes = useStyles();
@@ -13,40 +14,49 @@ const Navbar = () => {
     const toggleTheme = () => {
         currentTheme === 'darkTheme' ? setTheme('lightTheme') : setTheme('darkTheme');
     }
+
     /* Setting the toggle theme icon according to current theme */
     var toggleThemeIcon = ( currentTheme === 'darkTheme' ? <Brightness7SharpIcon className={classes.themeIcon} /> : <NightStaySharpIcon className={classes.themeIcon} /> );
+
     /* Creating a list of routes available */
     const NavList = () => {
+        return(
         <List className={classes.links}>
             <ListItem button className={classes.linkButton} >
-                <ListItemText primary="Shop" />
+                <Typography variant='body1'>Contact</Typography>
             </ListItem>
             <ListItem button className={classes.linkButton} >
-                <ListItemText primary="Projectsbrooooo" />
+                <Typography variant='body1'>About</Typography>
             </ListItem>
             <ListItem button className={classes.linkButton}>
-                <ListItemText primary="Portfolio" />
+                <Typography variant='body1'>Experience</Typography>
             </ListItem>
             <ListItem button className={classes.linkButton}>
-                <ListItemText primary="Contact" />
+                <Typography variant='body1'>Interests</Typography>
             </ListItem>
         </List>
+        );
     }
     return(
-        <AppBar className={classes.root}>
-            <Grid container>
+        <AppBar elevation={0} className={classes.root}>
+            <Grid container className={classes.gridContainer}>
                 <Grid item xs={10} md={4}>
                     <Typography variant='h6'>
-                        Welcome to my portfolio website
+                        AC
                     </Typography>
                 </Grid>
-                <Grid item className={classes.normalLinks} md={7}>
+                <Grid item md={7} className={classes.normalLinks}>
                     {NavList()}
                 </Grid>
-                <Grid item xs={1}>
+                <Grid item xs={1} className={classes.themeButton}>
                     <IconButton onClick={toggleTheme}>
                         {toggleThemeIcon}
-                    </IconButton>    
+                    </IconButton>
+                </Grid>
+                <Grid item xs={1} className={classes.menuButton}>
+                    <IconButton>
+                        <MenuSharpIcon className={classes.themeIcon}/>
+                    </IconButton>
                 </Grid>
             </Grid>
         </AppBar>

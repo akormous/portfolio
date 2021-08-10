@@ -7,6 +7,10 @@ const h4 = {
 const h6 = {
   fontWeight: 400
 }
+const body1 = {
+  fontWeight: 600,
+  fontSize: '0.7rem'
+}
 
 /* Dark Theme */
 export const darkTheme = createTheme({
@@ -40,6 +44,7 @@ export const darkTheme = createTheme({
             ].join(','),
             h6: h6,
             h4: h4,
+            body1: body1,
       }
 })
 
@@ -75,5 +80,6 @@ export const lightTheme = createTheme({
         ].join(','),
         h6: h6,
         h4: h4,
+        body1: body1,
     }
 });
