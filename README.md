@@ -11,4 +11,3 @@ and something more like that
 - [Gatsby](https://www.gatsbyjs.com/)
 - [Express](https://expressjs.com/)
 ![Frameworks](/meta/TechStack.jpg)
-
