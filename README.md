@@ -7,9 +7,8 @@ I initially created this project to learn NextJS, but now I am thinking to add a
 
 and something more like that
 
-## Built with
-- [React](https://reactjs.org/)  
-- [NextJS](https://nextjs.org/)
+## Built with 
+- [Gatsby](https://www.gatsbyjs.com/)
 - [Express](https://expressjs.com/)
-![Frameworks](/meta/Frameworks_logo.png)
+![Frameworks](/meta/TechStack.jpg)
 
