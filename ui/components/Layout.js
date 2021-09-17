@@ -8,7 +8,7 @@ const Layout = () => {
     const classes = useStyles();
     return(
         <>
-        <Navbar />
+        
         <Video />
         <Paper className={classes.root}>
             

@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { ThemeContext } from '../theme/CustomThemeProvider';
 import { AppBar, Typography, Grid, List, ListItem, Drawer, IconButton } from '@material-ui/core';
 import { useStyles } from '../styles/Navbar.js';
 /* Importing icons */
@@ -19,7 +18,7 @@ const Navbar = () => {
             {
                 routes.map((route) => {
                     return (
-                        <ListItem button className={classes.linkButton} >
+                        <ListItem key={route} >
                             <Typography variant='body1'>{route}</Typography>
                         </ListItem>
                     )
@@ -35,7 +34,7 @@ const Navbar = () => {
                 {
                     routes.map((route) => {
                         return (
-                            <ListItem button className={classes.menuButton}>
+                            <ListItem key={route}>
                                 <Typography variant='body1'>{route}</Typography>
                             </ListItem>
                         )
@@ -45,14 +44,7 @@ const Navbar = () => {
             </List>
         );
     }
-    /* Handling Theme Changes here */
-    var { currentTheme, setTheme } = useContext(ThemeContext);
-    const toggleTheme = () => {
-        currentTheme === 'darkTheme' ? setTheme('lightTheme') : setTheme('darkTheme');
-    }
-
-    /* Setting the toggle theme icon according to current theme */
-    var toggleThemeIcon = ( currentTheme === 'darkTheme' ? <Brightness7SharpIcon className={classes.themeIcon} /> : <NightStaySharpIcon className={classes.themeIcon} /> );
+    
 
     /* Toggle Drawer when menu button is clicked */
     const [drawer, setDrawer] = useState(false);
@@ -73,11 +65,6 @@ const Navbar = () => {
                 </Grid>
                 <Grid item md={7} className={classes.normalLinks}>
                     {HorizontalNavList()}
-                </Grid>
-                <Grid item xs={1} className={classes.themeButton}>
-                    <IconButton onClick={toggleTheme}>
-                        {toggleThemeIcon}
-                    </IconButton>
                 </Grid>
                 <Grid item xs={1} className={classes.drawerButton}>
                     <IconButton onClick={toggleDrawer(true)}>

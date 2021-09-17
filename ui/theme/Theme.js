@@ -18,7 +18,7 @@ const body1 = {
 }
 
 /* Dark Theme */
-export let darkTheme = createTheme({
+export let theme = createTheme({
     palette: {
         type: "dark",
         primary: {
@@ -54,42 +54,4 @@ export let darkTheme = createTheme({
       }
 })
 
-/* Light Theme */
-export let lightTheme = createTheme({
-    palette: {
-      type: "light",
-      primary: {
-        main: '#FF4FFF',
-        background: '#FFFFFF',
-        component: '#EEEDED',
-        appbar: '#005fb8',
-        appbartext: '#FFFFFF',
-      },
-      secondary: {
-        main: '#0F3057',
-        helper: '#005fb8',
-        helperColor: '#FFFFFF'
-      },
-    },
-    typography: {
-        fontFamily: [
-            '-apple-system',
-            'BlinkMacSystemFont',
-            '"Montserrat"',
-            'Montserrat',
-            '"Montserrat"',
-            'Montserrat',
-            'sans-serif',
-            '"Apple Color Emoji"',
-            '"Segoe UI Emoji"',
-            '"Segoe UI Symbol"',
-        ].join(','),
-        h6: h6,
-        h4: h4,
-        h1: h1,
-        body1: body1,
-    }
-});
-
-darkTheme = responsiveFontSizes(darkTheme);
-lightTheme = responsiveFontSizes(lightTheme);
+theme = responsiveFontSizes(theme);

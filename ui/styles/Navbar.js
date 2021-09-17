@@ -21,35 +21,17 @@ export const useStyles = makeStyles((theme) => ({
     Links (horizontal)
     */
     links: {
-        paddingTop: '0px',
-        paddingBottom: '0px',
-        [theme.breakpoints.up('md')]: {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-        },
+        
     },
     normalLinks: {
         display: 'flex',
         justifyContent: 'flex-end',
-        paddingTop: '0px',
-        paddingBottom: '0px',
         [theme.breakpoints.down('sm')]: {
             display: 'none',
         }
     },
     linkButton: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: 'auto',
-        height: '100%',
-        paddingTop: '0px',
-        borderBottom: '2px solid',
-        borderBottomColor: theme.palette.primary.background,
-        '&:hover': {
-            borderBottomColor: theme.palette.secondary.main
-        }
+        
     },
     /*
     Drawer
@@ -57,8 +39,6 @@ export const useStyles = makeStyles((theme) => ({
     drawerButton: {
         display: 'flex',
         justifyContent: 'center',
-        paddingTop: '0px',
-        paddingBottom: '10px',
         maxWidth: '60px',
         //minWidth: '0px',
         [theme.breakpoints.up('md')]: {
@@ -91,22 +71,4 @@ export const useStyles = makeStyles((theme) => ({
             borderBottomColor: theme.palette.secondary.main
         }
     },
-    /*
-    Theme toggle
-    */
-    themeButton: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        paddingTop: '0px',
-        paddingBottom: '10px',
-        maxWidth: '60px'
-    },
-    themeIcon: {
-        color: theme.palette.primary.main,
-        fontSize: '20px',
-        '&:hover': {
-            color: theme.palette.secondary.main
-        }
-    }
 }));
