@@ -3,6 +3,7 @@ import { ThemeProvider } from "@material-ui/styles"
 import { CssBaseline } from "@material-ui/core"
 import theme from '../theme'
 import Navbar from '../components/Navbar'
+import Hero from '../components/Hero'
 
 // markup
 const IndexPage = () => {
@@ -10,6 +11,7 @@ const IndexPage = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Navbar />
+      <Hero />
     </ThemeProvider>
     
   )
