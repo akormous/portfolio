@@ -21,7 +21,9 @@ const useStyles = makeStyles({
         height: '100%'
     },
     heading: {
-        fontFamily: "Montserrat"
+        fontFamily: "Montserrat",
+        fontWeight: 700,
+        fontStyle: 'italic'
     }
 
 });
@@ -30,7 +32,7 @@ const useStyles = makeStyles({
 export default function Hero() {
     const styles = useStyles();
     // name that will be displayed
-    let name = "Welcome to the Matrix";
+    let name = "Hi, I am Akshat";
     const [displayName, setDisplayName] = useState("");
     
     // when the component renders
