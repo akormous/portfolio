@@ -4,6 +4,7 @@ import { CssBaseline } from "@material-ui/core"
 import theme from '../theme'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
+import InstagramFeed from '../components/InstagramFeed'
 
 // markup
 const IndexPage = () => {
@@ -12,6 +13,7 @@ const IndexPage = () => {
       <CssBaseline />
       <Navbar />
       <Hero />
+      
     </ThemeProvider>
     
   )

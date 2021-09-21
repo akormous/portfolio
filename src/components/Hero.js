@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from "react"
 import { makeStyles } from "@material-ui/styles"
-import { Paper, Typography, Container, Grid, Button, Zoom } from "@material-ui/core"
-import BG from '../images/sample_bg.jpg'
+import { Box, Paper, Typography, Zoom } from "@material-ui/core"
 import {sleep, randomCharacter} from '../utility/common'
-
+import Video from "./Video"
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        height: '90vh',
-        backgroundImage: `url(${BG})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        
+        height: '100vh',
     },
-    container: {
-        height: '100%'
-    },
-    content: {
+    intro: {
+        position: 'absolute',
+        zIndex: '1',
+        display: 'flex',
+        flexDirection: 'column',
+        minWidth: '100%',
+        height: '80%',
+        justifyContent: 'center',
         alignItems: 'center',
-        height: '100%'
     },
 
 }));
@@ -27,8 +25,10 @@ const useStyles = makeStyles((theme) => ({
 export default function Hero() {
     const styles = useStyles();
     // name that will be displayed
-    let name = "Hi, I am Akshat";
-    const [displayName, setDisplayName] = useState("");
+    let f_name = "Akshat";
+    let l_name = "Chauhan";
+    const [displayFName, setDisplayFName] = useState("");
+    const [displayLName, setDisplayLName] = useState("");
     
     // when the component renders
     const [shouldShow, setShouldShow] = useState(false);
@@ -36,13 +36,15 @@ export default function Hero() {
 
     // resolves the name aka Glitch effect
     const resolveName = async () => {
-        for(var i = 0; i < name.length; ++i) {
+        for(var i = 0; i < Math.max(f_name.length, l_name.length); ++i) {
             for(var j = 0; j < 10; j++) {
                 await sleep(5);
-                setDisplayName(name.slice(0, i) + randomCharacter());
+                setDisplayFName(f_name.slice(0, i) + randomCharacter());
+                setDisplayLName(l_name.slice(0, i) + randomCharacter());
             }
         }
-        setDisplayName(name);
+        setDisplayFName(f_name);
+        setDisplayLName(l_name);
     }
     
     // when the component finishes rendering
@@ -51,22 +53,17 @@ export default function Hero() {
         resolveName();
     }, []);
     return(
-      <Paper className={styles.root}>
-          <Container className={styles.container} maxWidth='xl'>
-            <Grid  className={styles.content} container alignItems='center'>
-                
-                    <Grid item sm={12}>
-                        <Typography variant="h1">{displayName}</Typography>
-                    </Grid>
-                <Zoom in={shouldShow}>
-                    <Grid item>
-                        <Button onClick={() => resolveName()}>Tap to reveal name</Button>
-                    </Grid>
-                </Zoom>
-            </Grid>
-          </Container>
-          
-      </Paper>
+        <>
+        <Video />
+        <Paper className={styles.root}>
+            <Zoom in={shouldShow}>
+                <Box className={styles.intro}>
+                    <Typography align='center' variant='subtitle1'>Programmer, Engineer, Gamer</Typography>
+                    <Typography align='center' variant="h1">{displayFName}<br />{displayLName}</Typography>
+                </Box>
+            </Zoom>
+        </Paper>
+      </>
     
     )
 }
