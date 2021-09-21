@@ -1,4 +1,16 @@
 import { createTheme } from '@material-ui/core'
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+
+const breakpoints = createBreakpoints({});
+const h1 = {
+  fontWeight: 700,
+  [breakpoints.up("xs")]: {
+    fontSize: "3rem"
+  },
+  [breakpoints.up('md')]: {
+    fontSize: '6rem',
+  },
+}
 
 const theme = createTheme({
     palette: {
@@ -28,6 +40,7 @@ const theme = createTheme({
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
       ].join(','),
+      h1: h1
     },
 })
 
