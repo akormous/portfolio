@@ -14,21 +14,21 @@ const theme = createTheme({
           default: '#373636',
           paper: '#272626',
         },
-        typography: {
-          fontFamily: [
-            '-apple-system',
-            'BlinkMacSystemFont',
-            '"Montserrat"',
-            'Roboto',
-            '"Montserrat"',
-            'Montserrat',
-            'sans-serif',
-            '"Apple Color Emoji"',
-            '"Segoe UI Emoji"',
-            '"Segoe UI Symbol"',
-          ].join(','),
-        },
-    }
+    },
+    typography: {
+      fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Montserrat"',
+        'Roboto',
+        '"Montserrat"',
+        'Montserrat',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+    },
 })
 
 export default theme;

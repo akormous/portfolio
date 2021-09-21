@@ -8,6 +8,6 @@ I initially created this project to learn NextJS, but now I am thinking to add a
 and something more like that
 
 ## Built with 
-- [Gatsby](https://www.gatsbyjs.com/)
+- [React](https://reactjs.org/)
 - [Express](https://expressjs.com/)
 ![Frameworks](/meta/TechStack.jpg)
