@@ -4,7 +4,7 @@ import React from "react";
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: 'red',
-        height: '100vh'
+        height: '10vh'
     }
 }));
 

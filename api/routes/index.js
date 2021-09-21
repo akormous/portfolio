@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 
 router.get('/test', function(req, res, next) {
-    res.send({
+    res.json({
         'message': "Hi i am akshat"
     })
 });

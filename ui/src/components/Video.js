@@ -6,7 +6,6 @@ const Video = () => {
         <video autoPlay loop muted
         style={{
             position: 'absolute',
-            marginTop: '74px',
             width: '100%',
             left: '50%',
             top: '50%',

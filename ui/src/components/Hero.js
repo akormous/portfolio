@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         minWidth: '100%',
-        height: '80%',
+        height: '100%',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -58,7 +58,7 @@ export default function Hero() {
         <Paper className={styles.root}>
             <Zoom in={shouldShow}>
                 <Box className={styles.intro}>
-                    <Typography align='center' variant='subtitle1'>Programmer, Engineer, Gamer</Typography>
+                    <Typography align='center' variant='h6'>{"<insert epic tagline>"}</Typography>
                     <Typography align='center' variant="h1">{displayFName}<br />{displayLName}</Typography>
                 </Box>
             </Zoom>

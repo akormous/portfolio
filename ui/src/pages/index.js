@@ -13,7 +13,7 @@ const IndexPage = () => {
       <CssBaseline />
       <Navbar />
       <Hero />
-      
+
     </ThemeProvider>
     
   )
