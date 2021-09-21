@@ -5,7 +5,7 @@ import BG from '../images/sample_bg.jpg'
 import {sleep, randomCharacter} from '../utility/common'
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
         height: '90vh',
         backgroundImage: `url(${BG})`,
@@ -20,13 +20,8 @@ const useStyles = makeStyles({
         alignItems: 'center',
         height: '100%'
     },
-    heading: {
-        fontFamily: "Montserrat",
-        fontWeight: 700,
-        fontStyle: 'italic'
-    }
 
-});
+}));
 
 
 export default function Hero() {
@@ -61,7 +56,7 @@ export default function Hero() {
             <Grid  className={styles.content} container alignItems='center'>
                 
                     <Grid item sm={12}>
-                        <Typography variant="h1" className={styles.heading}>{displayName}</Typography>
+                        <Typography variant="h1">{displayName}</Typography>
                     </Grid>
                 <Zoom in={shouldShow}>
                     <Grid item>
