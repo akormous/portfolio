@@ -58,7 +58,7 @@ export default function Hero() {
         <Paper className={styles.root}>
             <Zoom in={shouldShow}>
                 <Box className={styles.intro}>
-                    <Typography align='center' variant='h6'>{"<insert epic tagline>"}</Typography>
+                    <Typography align='center' variant='h6'>{"Programmer, Engineer, Gamer"}</Typography>
                     <Typography align='center' variant="h1">{displayFName}<br />{displayLName}</Typography>
                 </Box>
             </Zoom>
