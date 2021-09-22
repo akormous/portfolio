@@ -9,11 +9,11 @@ import YouTubeIcon from '@material-ui/icons/Youtube';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    alignItems: 'end',
+    alignItems: 'center',
     justifyContent: 'center',
     height: '74px',
     color: 'white',
-    backgroundColor: 'rgba(0, 0, 0, 0.35)',
+    backgroundColor: 'rgba(0, 0, 0, 0.40)',
     'transition': 'all 0.20s',
     '&:hover': {
       backgroundColor: 'rgba(0, 0, 0, 0.65)'
