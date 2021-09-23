@@ -1,26 +1,26 @@
-import { makeStyles, Typography, Grid } from "@material-ui/core";
 import React from "react";
+import { makeStyles, Typography } from "@material-ui/core";
 import { Paper } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        background: 'linear-gradient(45deg, #f09433 0%, #e6683c 5%, #dc2743 20%, #cc2366 75%, #bc1888 100%);',
+        background: 'linear-gradient(45deg, #1DA1F2 30%, #72c5f7 90%)',
         borderRadius: 0,
         marginTop: '4px',
-        marginRight: '2px',
+        marginLeft: '2px',
         marginBottom: '2px',
         padding: theme.spacing(4),
         '&:hover': {
-            background: 'linear-gradient(45deg, #f09433 0%, #e6683c 15%, #dc2743 40%, #cc2366 75%, #bc1888 100%);',            
+            background: 'linear-gradient(45deg, #1DA1F2 60%, #72c5f7 90%)'
         }
     }
 }));
 
-export default function InstagramFeed() {
+export default function TwitterFeed() {
     const styles = useStyles();
     return(
         <Paper className={styles.root}>
-            <Typography variant="body1">Latest updates from Instagram</Typography>
+            <Typography variant="body1">Latest updates from Twitter</Typography>
             <Typography variant="subtitle1">@Akormous</Typography>
         </Paper>
     );

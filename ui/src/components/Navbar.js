@@ -1,5 +1,5 @@
 import * as React from "react"
-import { AppBar, Button, Toolbar, IconButton, Link } from "@material-ui/core"
+import { AppBar, Button, Toolbar, IconButton, Link, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -13,14 +13,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     height: '74px',
     color: 'white',
-    backgroundColor: 'rgba(0, 0, 0, 0.40)',
+    backgroundColor: 'rgba(0, 0, 0, 0.50)',
     'transition': 'all 0.20s',
     '&:hover': {
-      backgroundColor: 'rgba(0, 0, 0, 0.65)'
+      backgroundColor: 'rgba(0, 0, 0, 0.75)'
     }
   },
-  
-  
 }));
 
 export default function Navbar() {
@@ -28,6 +26,8 @@ export default function Navbar() {
     return(
       <AppBar className={styles.root} position='fixed'>
         <Toolbar>
+          <Typography variant="body1">Under Construction</Typography>
+
           <IconButton color="secondary" onClick={() => window.open('https://linkedin.com/in/akormous')} >
             <LinkedInIcon fontSize="medium" />
           </IconButton>
