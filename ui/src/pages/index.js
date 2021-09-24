@@ -14,7 +14,7 @@ const IndexPage = () => {
       <CssBaseline />
       <Navbar />
       <Hero />
-      
+      <ProfessionalExperience />
       <SocialMediaUpdates />      
     </ThemeProvider>
     

@@ -19,7 +19,7 @@ export default function ProfessionalExperience() {
             <Grid item xs={12} md={12}>
                 <TLDR />
             </Grid>
-            <Grid container >
+            {/*<Grid container >
                 <Grid item xs={12} md={6}>
                     <AmadeusExperience />
                 </Grid>
@@ -29,7 +29,7 @@ export default function ProfessionalExperience() {
                 <Grid item xs={12} md={6}>
                     
                 </Grid>
-            </Grid>
+            </Grid>*/}
             
         </Grid>
     );
