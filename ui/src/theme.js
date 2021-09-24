@@ -12,15 +12,28 @@ const h1 = {
   },
 }
 
+const h3 = {
+  fontWeight: 500,
+  [breakpoints.up("xs")]: {
+    fontSize: "2rem"
+  },
+  [breakpoints.up('md')]: {
+    fontSize: '4rem',
+  },
+}
+
 const theme = createTheme({
     palette: {
         type: 'dark',
         primary: {
-          main: '#08012f',
-          light: '#2a1ea4',
+          main: '#0f1416',
+          light: '#353a3c',
+          dark: '#000000'
         },
         secondary: {
-          main: '#ffffff',
+          main: '#546e7a',
+          light: '#819ca9',
+          dark: '#29434e'
         },
         background: {
           default: '#000000',
@@ -40,7 +53,8 @@ const theme = createTheme({
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
       ].join(','),
-      h1: h1
+      h1: h1,
+      h3: h3,
     },
 })
 

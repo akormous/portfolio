@@ -6,9 +6,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         background: 'linear-gradient(45deg, #1DA1F2 30%, #72c5f7 90%)',
         borderRadius: 0,
-        marginTop: '4px',
-        marginLeft: '2px',
-        marginBottom: '2px',
         padding: theme.spacing(4),
         '&:hover': {
             background: 'linear-gradient(45deg, #1DA1F2 60%, #72c5f7 90%)'
