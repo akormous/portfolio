@@ -7,9 +7,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         position: 'relative',
         paddingTop: '56.25%',
-        marginTop: '2px',
-        marginRight: '2px',
-        marginBottom: '4px',
+        
     },
     player: {
         position: 'absolute',

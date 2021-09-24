@@ -7,7 +7,8 @@ import YouTubeVideo from './YouTubeVideo';
 const useStyles = makeStyles((theme) => ({
     root: {
 
-    }
+    },
+    
 }));
 
 export default function SocialMediaUpdates() {
@@ -19,9 +20,7 @@ export default function SocialMediaUpdates() {
             <Grid item xs={12} md={6}>
                 <TwitterFeed />                
             </Grid>
-            <Grid item xs={12} md={6}>
-                <YouTubeVideo />                
-            </Grid>
+
         </Grid>
     );
 }

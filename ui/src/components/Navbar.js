@@ -13,10 +13,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     height: '74px',
     color: 'white',
-    backgroundColor: 'rgba(0, 0, 0, 0.50)',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     'transition': 'all 0.20s',
     '&:hover': {
-      backgroundColor: 'rgba(0, 0, 0, 0.75)'
+      backgroundColor: 'rgba(0, 0, 0, 0.90)'
     }
   },
 }));
@@ -28,23 +28,23 @@ export default function Navbar() {
         <Toolbar>
           <Typography variant="body1">Under Construction</Typography>
 
-          <IconButton color="secondary" onClick={() => window.open('https://linkedin.com/in/akormous')} >
+          <IconButton color="#ffffff" onClick={() => window.open('https://linkedin.com/in/akormous')} >
             <LinkedInIcon fontSize="medium" />
           </IconButton>
 
-          <IconButton color="secondary" onClick={() => window.open('https://github.com/akormous')} >
+          <IconButton color="#ffffff" onClick={() => window.open('https://github.com/akormous')} >
             <GitHubIcon fontSize="medium" />
           </IconButton>
 
-          <IconButton color="secondary" onClick={() => window.open('https://twitter.com/akormous')} >
+          <IconButton color="#ffffff" onClick={() => window.open('https://twitter.com/akormous')} >
             <TwitterIcon fontSize="medium" />
           </IconButton>
 
-          <IconButton color="secondary" onClick={() => window.open('https://instagram.com/akormous')} >
+          <IconButton color="#ffffff" onClick={() => window.open('https://instagram.com/akormous')} >
             <InstagramIcon fontSize="medium" />
           </IconButton>
           
-          <IconButton color="secondary" onClick={() => window.open('https://www.youtube.com/channel/UCvXahJHpat0GJRtGQypOq-A')} >
+          <IconButton color="#ffffff" onClick={() => window.open('https://www.youtube.com/channel/UCvXahJHpat0GJRtGQypOq-A')} >
             <YouTubeIcon fontSize="medium" />
           </IconButton>
         </Toolbar>
