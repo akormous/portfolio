@@ -45,7 +45,7 @@ export default function Hero() {
     const resolveName = async () => {
         for(var i = 0; i < Math.max(f_name.length, l_name.length); ++i) {
             for(var j = 0; j < 10; j++) {
-                await sleep(25);
+                await sleep(5);
                 setDisplayFName(randomCharacter() + f_name.slice(f_name.length - i, f_name.length));
                 setDisplayLName(l_name.slice(0, i) + randomCharacter());
             }
@@ -61,13 +61,12 @@ export default function Hero() {
     }, []);
     return(
         <>
-        
         <Paper className={styles.root}>
         <Video />
             <Zoom in={shouldShow}>
                 <Box className={styles.intro}>
                     <Typography align='center' variant='h6'>{"Programmer, Engineer, Gamer"}</Typography>
-                    <Typography align='center' variant="h1">{displayFName}{" "}{displayLName}</Typography>
+                    <Typography align='center' variant="h1">{displayFName}<br />{displayLName}</Typography>
                 </Box>
             </Zoom>
         </Paper>
