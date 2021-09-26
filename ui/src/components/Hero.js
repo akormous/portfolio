@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/styles"
 import { Box, Paper, Typography, Zoom } from "@material-ui/core"
 import {sleep, randomCharacter} from '../utility/common'
 import Video from "./Video"
-import BGVideo from '../images/sample_video.mp4'
 
 const useStyles = makeStyles((theme) => ({
     root: {

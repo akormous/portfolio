@@ -1,6 +1,5 @@
-import { makeStyles, Typography, Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import React from "react";
-import { Paper } from "@material-ui/core";
 import ReactPlayer from 'react-player';
 
 const useStyles = makeStyles((theme) => ({

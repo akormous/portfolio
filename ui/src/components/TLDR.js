@@ -1,4 +1,4 @@
-import { Container, Divider, Paper, Typography } from '@material-ui/core';
+import { Container, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import React from 'react';
 
