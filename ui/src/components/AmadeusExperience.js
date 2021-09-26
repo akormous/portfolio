@@ -1,4 +1,4 @@
-import { Container, makeStyles, Paper, Typography, Grid, List, ListItem, Divider } from '@material-ui/core';
+import { Container, makeStyles, Typography, Grid, List, ListItem, Divider } from '@material-ui/core';
 import React from 'react';
 import AmadeusLogo from '../images/AmadeusLogo.png';
 
@@ -42,7 +42,7 @@ export default function JobTemplate(props) {
         <Container className={styles.root} maxWidth="lg" >
             <Grid className={styles.content} container>
                 <Grid className={styles.item} item xs={12} md={3}>
-                    <img className={styles.logo} src={AmadeusLogo} />
+                    <img alt="amadeus logo" className={styles.logo} src={AmadeusLogo} />
                 </Grid>
                 <Grid className={styles.item} item xs={12} md={3}>
                     <Typography variant="h6">

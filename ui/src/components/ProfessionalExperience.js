@@ -2,8 +2,6 @@ import { Grid, Typography, Container } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from "@material-ui/styles"
 import AmadeusExperience from './AmadeusExperience';
-import TLDR from './TLDR';
-import TechnicalSkills from './TechnicalSkills';
 
 const useStyles = makeStyles((theme) => ({
     root: {

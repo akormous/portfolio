@@ -4,7 +4,14 @@ module.exports = {
     title: "ui",
   },
   plugins: [
-    `gatsby-plugin-material-ui`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

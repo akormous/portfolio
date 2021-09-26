@@ -1,15 +1,16 @@
 import React from 'react';
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import InstagramFeed from './InstagramFeed';
 import TwitterFeed from './TwitterFeed';
-import YouTubeVideo from './YouTubeVideo';
 
+/*
 const useStyles = makeStyles((theme) => ({
     root: {
 
     },
     
 }));
+*/
 
 export default function SocialMediaUpdates() {
     return(
