@@ -4,6 +4,7 @@ module.exports = {
     title: "ui",
   },
   plugins: [
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
