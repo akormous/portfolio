@@ -1,7 +1,6 @@
 import { Container, makeStyles, Paper, Typography, Grid, List, ListItem, Divider } from '@material-ui/core';
 import React from 'react';
 import AmadeusLogo from '../images/AmadeusLogo.png';
-import ClEducateLogo from '../images/CLEducate.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
