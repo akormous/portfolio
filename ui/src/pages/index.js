@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import ProfessionalExperience from "../components/ProfessionalExperience"
 import SocialMediaUpdates from "../components/SocialMediaUpdates"
-
+import TLDR from "../components/TLDR"
 // markup
 const IndexPage = () => {
   return (
@@ -14,6 +14,7 @@ const IndexPage = () => {
       <CssBaseline />
       <Navbar />
       <Hero />
+      <TLDR />
       <ProfessionalExperience />
       <SocialMediaUpdates />      
     </ThemeProvider>

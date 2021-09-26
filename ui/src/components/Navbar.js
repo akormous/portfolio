@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { AppBar, Toolbar, IconButton, Link, Typography, List, ListItem, Divider, Button } from "@material-ui/core"
+import { AppBar, Toolbar, IconButton, Link, Typography, List, ListItem, Divider, Button, Container } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
 import SocialLinks from "./SocialLinks";
 import { Hidden } from "@material-ui/core";
@@ -12,10 +12,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     height: '74px',
     color: 'white',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.25)',
     'transition': 'all 0.20s',
     '&:hover': {
-      backgroundColor: 'rgba(0, 0, 0, 0.90)'
+      backgroundColor: 'rgba(0, 0, 0, 0.40)'
     }
   },
   
@@ -26,7 +26,10 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     color: '#ffffff',
-    marginRight: 20
+    marginRight: theme.spacing(6),
+    '&:hover': {
+      color: '#5e615f'
+    }
   },
   logo: {
     marginRight: 'auto',
@@ -54,27 +57,28 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
     return(
       <AppBar className={styles.root} position='fixed'>
-        <Toolbar>
-          <Typography className={styles.logo} variant="caption">Under Construction</Typography>
-          <Hidden smDown>
-            {navLinks.map((item) => (
-              <Link 
-              key={item.name}
-              className={styles.link}
-              variant="button"
-              underline="none"
-              href={item.href}
-              >{item.name}</Link>
-            ))}
-            <SocialLinks />
-          </Hidden>
-          <Hidden mdUp>
-            <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon />
-            </IconButton>
-          </Hidden>
-        </Toolbar>
-        
+        <Container maxWidth="lg">
+          <Toolbar disableGutters>
+            <Typography className={styles.logo} variant="caption">Under Construction</Typography>
+            <Hidden smDown>
+              {navLinks.map((item) => (
+                <Link 
+                key={item.name}
+                className={styles.link}
+                variant="button"
+                underline="none"
+                href={item.href}
+                >{item.name}</Link>
+              ))}
+              <SocialLinks />
+            </Hidden>
+            <Hidden mdUp>
+              <IconButton onClick={() => setOpen(true)}>
+                <MenuIcon />
+              </IconButton>
+            </Hidden>
+          </Toolbar>
+        </Container>
         <SwipeableDrawer
           classes={{paper: styles.drawer}}
           anchor="right"
