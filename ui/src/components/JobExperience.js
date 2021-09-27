@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
     },
     divider: {
         margin: theme.spacing(2),
+    },
+    listitem: {
+        padding: 0
     }
 }));
 
@@ -45,7 +48,7 @@ export default function JobExperience(props) {
                     <img alt="amadeus logo" className={styles.logo} src={AmadeusLogo} />
                 </Grid>
                 <Grid className={styles.item} item xs={12} md={3}>
-                    <Typography variant="h6">
+                    <Typography variant="body1">
                     Software Engineer
                     </Typography>
                     <Typography variant="caption">
@@ -53,9 +56,10 @@ export default function JobExperience(props) {
                     </Typography>
                 </Grid>
                 <Grid className={styles.item} item xs={12} md={6}>
+                <Divider orientation="vertical" variant="middle" flexItem />
                     <Typography variant="body1">
                         <List disablePadding>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem className={styles.listitem} disablePadding disableGutters>
                             Working as a C++ Developer in PAYMENTS teams
                             </ListItem>
                         </List>
@@ -68,7 +72,7 @@ export default function JobExperience(props) {
                 <Grid className={styles.item} item xs={12} md={3}>
                 </Grid>
                 <Grid className={styles.item} item xs={12} md={3}>
-                    <Typography variant="h6">
+                    <Typography variant="body1">
                     Software Engineer Intern
                     </Typography>
                     <Typography variant="caption">
@@ -78,13 +82,13 @@ export default function JobExperience(props) {
                 <Grid className={styles.item} item xs={12} md={6}>
                     <Typography variant="body1">
                         <List disablePadding>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem className={styles.listitem} disableGutters>
                             Built a web application that simplified testing workflow of Amadeus Payment scenarios.
                             </ListItem>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem className={styles.listitem} disablePadding disableGutters>
                             Developed using React, Redux and Express.js
                             </ListItem>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem className={styles.listitem} disablePadding disableGutters>
                             Learnt about the payment flow in Amadeus systems
                             </ListItem>
                         </List>
@@ -97,7 +101,7 @@ export default function JobExperience(props) {
                     <Typography variant="h6">CL Educate Ltd.</Typography>
                 </Grid>
                 <Grid className={styles.item} item xs={12} md={3}>
-                    <Typography variant="h6">
+                    <Typography variant="body1">
                     Data Science Intern
                     </Typography>
                     <Typography variant="caption">
@@ -107,13 +111,13 @@ export default function JobExperience(props) {
                 <Grid className={styles.item} item xs={12} md={6}>
                     <Typography variant="body1">
                         <List disablePadding>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem className={styles.listitem} disablePadding disableGutters>
                             Learnt to work with data and manipulate it using Pandas Library
                             </ListItem>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem className={styles.listitem} disablePadding disableGutters>
                             Visualizing results using MatplotLib.                            
                             </ListItem>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem className={styles.listitem} disablePadding disableGutters>
                             Applied Machine Learning Algorithms (Regression, Classification and Clustering) on past stock market data to gain various insights.                       
                             </ListItem>
                         </List>

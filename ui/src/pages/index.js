@@ -7,6 +7,8 @@ import Hero from '../components/Hero'
 import ProfessionalExperience from "../components/ProfessionalExperience"
 import SocialMediaUpdates from "../components/SocialMediaUpdates"
 import Tldr from "../components/TLDR"
+import TechnicalSkills from "../components/TechnicalSkills"
+
 // markup
 const IndexPage = () => {
   return (
@@ -16,6 +18,7 @@ const IndexPage = () => {
       <Hero />
       <Tldr />
       <ProfessionalExperience />
+      <TechnicalSkills />
       <SocialMediaUpdates />      
     </ThemeProvider>
     
