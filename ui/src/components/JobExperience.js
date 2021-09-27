@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function JobTemplate(props) {
+export default function JobExperience(props) {
     const styles = useStyles();
     return(
         <Container className={styles.root} maxWidth="lg" >
@@ -54,7 +54,7 @@ export default function JobTemplate(props) {
                 </Grid>
                 <Grid className={styles.item} item xs={12} md={6}>
                     <Typography variant="body1">
-                        <List>
+                        <List disablePadding>
                             <ListItem disablePadding disableGutters>
                             Working as a C++ Developer in PAYMENTS teams
                             </ListItem>
@@ -77,7 +77,7 @@ export default function JobTemplate(props) {
                 </Grid>
                 <Grid className={styles.item} item xs={12} md={6}>
                     <Typography variant="body1">
-                        <List>
+                        <List disablePadding>
                             <ListItem disablePadding disableGutters>
                             Built a web application that simplified testing workflow of Amadeus Payment scenarios.
                             </ListItem>
@@ -106,7 +106,7 @@ export default function JobTemplate(props) {
                 </Grid>
                 <Grid className={styles.item} item xs={12} md={6}>
                     <Typography variant="body1">
-                        <List>
+                        <List disablePadding>
                             <ListItem disablePadding disableGutters>
                             Learnt to work with data and manipulate it using Pandas Library
                             </ListItem>
@@ -114,13 +114,7 @@ export default function JobTemplate(props) {
                             Visualizing results using MatplotLib.                            
                             </ListItem>
                             <ListItem disablePadding disableGutters>
-                            Applied Machine Learning Algorithms (Regression, Classification and Clustering) on past stock market data to gain various insights such as:
-                            1. Trade Calls (using Bollinger Bands and Simple Moving Averages)
-                            2. Beta Value of a Stock
-                            3. Correlation between various stocks
-                            4. Predicting future stock prices
-                            5. Efficient Frontier in Modern Portfolio Theory
-                            6. Stock Clustering                        
+                            Applied Machine Learning Algorithms (Regression, Classification and Clustering) on past stock market data to gain various insights.                       
                             </ListItem>
                         </List>
                     </Typography>
