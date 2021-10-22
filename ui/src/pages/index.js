@@ -17,7 +17,7 @@ const IndexPage = () => {
       <Hero />
       <Tldr />
       <ProfessionalExperience />
-      <SocialMediaUpdates />      
+          
     </ThemeProvider>
     
   )

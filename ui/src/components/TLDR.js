@@ -6,8 +6,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         background: theme.palette.primary.main,
         borderRadius: 0,
-        paddingTop: theme.spacing(6),
-        paddingBottom: theme.spacing(6),
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
         
     },
     container: {
@@ -25,7 +25,7 @@ export default function TLDR() {
             <Container className={styles.container} maxWidth="lg">
             <Typography variant="h3">TL;DR</Typography>
             
-            <Typography variant="body1">
+            <Typography align="justify" variant="body2">
             {"I am a Software Engineer, "}
             {"experienced in building React apps with Material Design. "}
             {"I also have experience in building C++ and Python backend systems."}

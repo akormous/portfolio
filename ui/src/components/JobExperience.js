@@ -1,11 +1,13 @@
-import { Container, makeStyles, Typography, Grid, List, ListItem, Divider } from '@material-ui/core';
+import { Container, makeStyles, Typography, Grid, Divider } from '@material-ui/core';
 import React from 'react';
-
+import {Timeline, TimelineDot, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent} from '@material-ui/lab';
+import FlightSharpIcon from '@material-ui/icons/FlightSharp';
+import BarChartSharpIcon from '@material-ui/icons/BarChartSharp';
 const useStyles = makeStyles((theme) => ({
     root: {
         background: theme.palette.primary.dark,
         borderRadius: 0,
-        alignItems: 'center',
+        alignItems: 'start',
         justifyContent: 'center',
         flexDirection: 'column',
         display: 'flex',
@@ -17,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         paddingTop: theme.spacing(4),
-        paddingBottom: theme.spacing(4)
+        paddingBottom: theme.spacing(2)
     },
     content: {
         alignItems: 'start',
@@ -35,11 +37,17 @@ const useStyles = makeStyles((theme) => ({
     companyname: {
         fontWeight: 600
     },
+    designation: {
+        color: theme.palette.secondary.extralight
+    },
     divider: {
         margin: theme.spacing(2),
     },
     listitem: {
         padding: 0
+    },
+    oppositeContent: {
+        flex: 0
     }
 }));
 
@@ -50,70 +58,79 @@ export default function JobExperience(props) {
                 <Container className={styles.heading} maxWidth="lg">
                     <Typography variant="h3">Experience</Typography>
                 </Container>
-                <Grid className={styles.content} container>
-                    <Grid item xs={12} md={3}>
+                <Timeline align="left" position="right">
+                    <TimelineItem>
+                        <TimelineOppositeContent className={styles.oppositeContent} />
+                        <TimelineSeparator>
+                        <TimelineDot color="primary">
+                            <FlightSharpIcon />
+                        </TimelineDot>
+                        <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
                         <Typography variant="body1" className={styles.companyname}>
-                            Amadeus IT Group
-                        </Typography>
-                    </Grid>
-                    <Grid className={styles.item} item xs={12} md={3}>
-                        <Typography variant="body1">
+                        Amadeus IT Group
+                        </Typography>     
+                        <Typography variant="body1" className={styles.designation}>
                         Software Engineer
                         </Typography>
                         <Typography variant="caption">
                         Aug 2021 - present
                         </Typography>
-                    </Grid>
-                    <Grid className={styles.item} item xs={12} md={6}>
-                        <Typography align='justify' variant="body1">
+                        <Typography align='justify' variant="body2">
                         Working as a C++ Developer in PAYMENTS teams
                         </Typography>
-                    </Grid>
-                    <Grid item className={styles.divider} xs={12}>
-                        
-                    </Grid>
-                    
-                    <Grid className={styles.item} item xs={12} md={3}>
-                    </Grid>
-                    <Grid className={styles.item} item xs={12} md={3}>
-                        <Typography variant="body1">
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <TimelineOppositeContent className={styles.oppositeContent} />
+                        <TimelineSeparator>
+                        <TimelineDot color="primary">
+                            <FlightSharpIcon />
+                        </TimelineDot>
+                        <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                        <Typography variant="body1" className={styles.companyname}>
+                        Amadeus IT Group
+                        </Typography>     
+                        <Typography variant="body1" className={styles.designation}>
                         Software Engineer Intern
                         </Typography>
                         <Typography variant="caption">
                         Jan 2021 - Jun 2021
                         </Typography>
-                    </Grid>
-                    <Grid className={styles.item} item xs={12} md={6}>
-                        <Typography align='justify' variant="body1">
+                        <Typography align='justify' variant="body2">
                         Built a web application that simplified testing workflow of Amadeus Payment scenarios.
                         Developed using React, Redux and Express.js
                         </Typography>
-                    </Grid>
-                    <Grid item className={styles.divider} xs={12}>
-                        <Divider />
-                    </Grid>
-                    <Grid item xs={12} md={3}>
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <TimelineOppositeContent className={styles.oppositeContent} />
+                        <TimelineSeparator>
+                        <TimelineDot color="primary">
+                            <BarChartSharpIcon />
+                        </TimelineDot>
+                        </TimelineSeparator>
+                        <TimelineContent>
                         <Typography variant="body1" className={styles.companyname}>
                             CL Educate Ltd.
                         </Typography>
-                    </Grid>
-                    <Grid className={styles.item} item xs={12} md={3}>
-                        <Typography variant="body1">
+                        <Typography variant="body1" className={styles.designation}>
                         Data Science Intern
                         </Typography>
                         <Typography variant="caption">
                         May 2020 - Jun 2020
                         </Typography>
-                    </Grid>
-                    <Grid className={styles.item} item xs={12} md={6}>
-                        <Typography align='justify' variant="body1">
+                        <Typography align='justify' variant="body2">
                         Learnt to work with data and manipulate it using Pandas Library,
                         visualizing results using MatplotLib.                            
                         Applied Machine Learning Algorithms (Regression, Classification and Clustering) on past stock market data.
                         </Typography>
-                    </Grid>
-                </Grid>
-                
+                        </TimelineContent>
+                    </TimelineItem>
+                </Timeline>
             </Container>
         
     )
