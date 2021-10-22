@@ -1,34 +1,28 @@
-import { Grid, Typography, Container } from '@material-ui/core';
+import { Grid, Paper, Container } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from "@material-ui/styles"
-import AmadeusExperience from './AmadeusExperience';
+import JobExperience from './JobExperience';
+import TechnicalSkills from './TechnicalSkills';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        alignItems: 'center',
         justifyContent: 'center',
     },
-    heading: {
-        alignItems: 'center',
-        justifyContent: 'center',
+    content: {
         display: 'flex',
-        flexDirection: 'column',
-        paddingTop: theme.spacing(6),
-        paddingBottom: theme.spacing(6)
-    }
+        flexDirection: 'column'
+    },
 }));
 
 export default function ProfessionalExperience() {
     const styles = useStyles();
     return (
-        <Grid container className={styles.root}>
-            <Grid item xs={12}>
-                <Container className={styles.heading} maxWidth="lg">
-                    <Typography variant="h3">Experience</Typography>
-                </Container>
+        <Grid container alignItems="stretch" className={styles.root}>
+            <Grid className={styles.content} item xs={12} md={6}>
+                <JobExperience />
             </Grid>
-            <Grid item xs={12}>
-                <AmadeusExperience />
+            <Grid className={styles.content} item xs={12} md={6}>
+                <TechnicalSkills />
             </Grid>
         </Grid>
     );

@@ -1,4 +1,4 @@
-import { createTheme } from '@material-ui/core'
+import { createTheme, responsiveFontSizes } from '@material-ui/core'
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
 const breakpoints = createBreakpoints({});
@@ -22,7 +22,7 @@ const h3 = {
   },
 }
 
-const theme = createTheme({
+let theme = createTheme({
     palette: {
         type: 'dark',
         primary: {
@@ -33,7 +33,8 @@ const theme = createTheme({
         secondary: {
           main: '#546e7a',
           light: '#819ca9',
-          dark: '#29434e'
+          dark: '#29434e',
+          extralight: '#bababa'
         },
         background: {
           default: '#000000',
@@ -57,5 +58,5 @@ const theme = createTheme({
       h3: h3,
     },
 })
-
+theme = responsiveFontSizes(theme);
 export default theme;
