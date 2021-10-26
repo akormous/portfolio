@@ -1,8 +1,10 @@
-import { Container, makeStyles, Typography, Grid, Divider } from '@material-ui/core';
+import { Container, makeStyles, Typography, Paper, Divider } from '@material-ui/core';
 import React from 'react';
 import {Timeline, TimelineDot, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent} from '@material-ui/lab';
 import FlightSharpIcon from '@material-ui/icons/FlightSharp';
 import BarChartSharpIcon from '@material-ui/icons/BarChartSharp';
+import Heading from './Heading';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         background: theme.palette.primary.dark,
@@ -13,14 +15,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         paddingBottom: theme.spacing(4),
     },
-    heading: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        paddingTop: theme.spacing(4),
-        paddingBottom: theme.spacing(2)
-    },
+    
     content: {
         alignItems: 'start',
         justifyContent: 'center',
@@ -54,10 +49,11 @@ const useStyles = makeStyles((theme) => ({
 export default function JobExperience(props) {
     const styles = useStyles();
     return(
-            <Container className={styles.root}>
-                <Container className={styles.heading} maxWidth="lg">
-                    <Typography variant="h3">Experience</Typography>
-                </Container>
+        <Paper className={styles.root}>
+
+        
+            <Container maxWidth='lg'>
+                <Heading content="Experience" />
                 <Timeline align="left" position="right">
                     <TimelineItem>
                         <TimelineOppositeContent className={styles.oppositeContent} />
@@ -132,6 +128,7 @@ export default function JobExperience(props) {
                     </TimelineItem>
                 </Timeline>
             </Container>
+        </Paper>
         
     )
 }

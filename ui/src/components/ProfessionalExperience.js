@@ -18,12 +18,10 @@ export default function ProfessionalExperience() {
     const styles = useStyles();
     return (
         <Grid container alignItems="stretch" className={styles.root}>
-            <Grid className={styles.content} item xs={12} md={6}>
+            <Grid className={styles.content} item xs={12}>
                 <JobExperience />
             </Grid>
-            <Grid className={styles.content} item xs={12} md={6}>
-                <TechnicalSkills />
-            </Grid>
+            
         </Grid>
     );
 }

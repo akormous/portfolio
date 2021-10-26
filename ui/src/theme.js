@@ -28,7 +28,7 @@ let theme = createTheme({
         primary: {
           main: '#0f1416',
           light: '#353a3c',
-          dark: '#000000'
+          dark: '#000000',
         },
         secondary: {
           main: '#546e7a',
@@ -40,6 +40,7 @@ let theme = createTheme({
           default: '#000000',
           paper: '#272626',
         },
+        
     },
     typography: {
       fontFamily: [
