@@ -1,11 +1,17 @@
 ## Portfolio website
 
-I initially created this project to learn GatsbyJS, but now I am thinking to add a lot more functionality in this. Basically, this website should describe what I have acheived in my career and my personal hobbies and stuff like that. I am going to integrate a bunch of APIs in this to show my interests and stuff, for example:
-1. Spotify API: display my recent liked songs and top artists (if possible)
-2. Twitter API: display my recent tweets
-3. Instagram API: ??
+### Home page components to do
 
-and something more like that
+1. About
+2. Experience
+3. Projects
+4. Contact
+
+### About page components to do
+1. Favorite Songs from Spotify
+2. Latest Tweet
+3. Latest Instagram Post
+    
 
 ## Built with 
 - [Gatsby](https://www.gatsbyjs.com/)

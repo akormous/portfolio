@@ -5,7 +5,7 @@ import theme from '../theme'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import ProfessionalExperience from "../components/ProfessionalExperience"
-import SocialMediaUpdates from "../components/SocialMediaUpdates"
+import About from "../components/About"
 import Tldr from "../components/TLDR"
 
 // markup
@@ -16,6 +16,7 @@ const IndexPage = () => {
       <Navbar />
       <Hero />
       <Tldr />
+      <About />
       <ProfessionalExperience />
           
     </ThemeProvider>

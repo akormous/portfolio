@@ -5,6 +5,17 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'AC',
+        
+        start_url: '/',
+        
+        display: 'standalone',
+        icon: 'src/images/favicon.ico',
+      }
+    },
+    {
       resolve: `gatsby-plugin-material-ui`,
       options: {
         stylesProvider: {

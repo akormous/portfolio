@@ -1,13 +1,13 @@
 import { Container, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import React from 'react';
+import Heading from './Heading';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         background: theme.palette.primary.main,
         borderRadius: 0,
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
+        paddingBottom: theme.spacing(6),
         
     },
     container: {
@@ -23,7 +23,7 @@ export default function TLDR() {
     return(
         <Paper className={styles.root}>
             <Container className={styles.container} maxWidth="lg">
-            <Typography variant="h3">TL;DR</Typography>
+            <Heading content="TL;DR" />
             
             <Typography align="justify" variant="body2">
             {"I am a Software Engineer, "}
