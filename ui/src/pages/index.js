@@ -11,15 +11,14 @@ import Tldr from "../components/TLDR"
 // markup
 const IndexPage = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+   <>
       <Navbar />
       <Hero />
       <Tldr />
       <About />
       <ProfessionalExperience />
-          
-    </ThemeProvider>
+  </>     
+    
     
   )
 }

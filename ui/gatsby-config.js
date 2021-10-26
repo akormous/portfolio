@@ -4,6 +4,8 @@ module.exports = {
     title: "ui",
   },
   plugins: [
+    'gatsby-plugin-top-layout',
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -14,14 +16,6 @@ module.exports = {
         display: 'standalone',
         icon: 'src/images/favicon.ico',
       }
-    },
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        stylesProvider: {
-          injectFirst: true,
-        },
-      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
