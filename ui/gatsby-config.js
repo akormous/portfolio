@@ -1,17 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Akshat Chauhan`,
-    author: {
-      name: `Akshat Chauhan`,
-      summary: `who lives and works in India and likes to solve problems`,
-    },
-    image: `/preview.png`,
-    description: `Hi, I am Akshat :)`,
-    siteUrl: `https://akormous.netlify.app`,
-    social: {
-      twitter: `akormous`,
-    },
-  
+    title: 'Akshat Chauhan',
+    description:
+      'Hi, I am Akshat :)',
+    siteUrl: 'https://akormous.netlify.app', // No trailing slash allowed!
+    image: '/preview.png', // Path to your image you placed in the 'static' folder
+    twitterUsername: '@akormous',
   },
   plugins: [
     `gatsby-plugin-top-layout`,
