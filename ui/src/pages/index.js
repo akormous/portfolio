@@ -1,7 +1,4 @@
 import * as React from "react"
-import { ThemeProvider } from "@material-ui/styles"
-import { CssBaseline } from "@material-ui/core"
-import theme from '../theme'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import ProfessionalExperience from "../components/ProfessionalExperience"

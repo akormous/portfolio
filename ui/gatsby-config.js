@@ -4,27 +4,19 @@ module.exports = {
     title: "ui",
   },
   plugins: [
-    'gatsby-plugin-top-layout',
-    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-top-layout`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'AC',
-        
+        name: 'AC', 
         start_url: '/',
         
         display: 'standalone',
         icon: 'src/images/favicon.ico',
       }
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `montserrat\:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i` // you can also specify font weights and styles
-        ],
-        display: 'swap'
-      }
-    }
+    `gatsby-plugin-material-ui`,
   ],
 };
