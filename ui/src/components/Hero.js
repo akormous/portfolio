@@ -27,36 +27,70 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+const intros = {
+    english: {
+        f_name: "Akshat",
+        l_name: "Chauhan",
+        tagline: "Programmer, Engineer, Gamer"
+    },
+    japanese: {
+        f_name: "アクシャット",
+        l_name: "チョウアン",
+        tagline: "プログラマー、エンジニア、ゲーマー"
+    },
+    hindi: {
+        f_name: "अक्षत",
+        l_name: "चौहान",
+        tagline: "प्रोग्रामर, इंजीनियर, गेमर"
+    },
+    russian: {
+        f_name: "Акшат",
+        l_name: "Чаухан",
+        tagline: "Программист, инженер, геймер"
+    },
+};
 
 export default function Hero() {
     const styles = useStyles();
-    // name that will be displayed
-    let f_name = "Akshat";
-    let l_name = "Chauhan";
-    const [displayFName, setDisplayFName] = useState("");
-    const [displayLName, setDisplayLName] = useState("");
+    // name and tagline that will be displayed
+    const [tagline, setTagline] = useState("");
+    const [FName, setFName] = useState("");
+    const [LName, setLName] = useState("");
     
     // when the component renders
     const [shouldShow, setShouldShow] = useState(false);
    
 
     // resolves the name aka Glitch effect
-    const resolveName = async () => {
+    const resolveName = async (f_name, l_name) => {
         for(var i = 0; i < Math.max(f_name.length, l_name.length); ++i) {
             for(var j = 0; j < 10; j++) {
                 await sleep(5);
-                setDisplayFName(randomCharacter() + f_name.slice(f_name.length - i, f_name.length));
-                setDisplayLName(l_name.slice(0, i) + randomCharacter());
+                setFName(randomCharacter() + f_name.slice(f_name.length - i, f_name.length));
+                setLName(l_name.slice(0, i) + randomCharacter());
             }
         }
-        setDisplayFName(f_name);
-        setDisplayLName(l_name);
+        setFName(f_name);
+        setLName(l_name);
     }
     
+    // cycles through multiple languages
+    const cycleLanguages = async () => {
+        for(var lang in intros) {
+            if(!intros.hasOwnProperty(lang))    continue;
+            var intro = intros[lang];
+            setTagline(intro.tagline);
+            resolveName(intro.f_name, intro.l_name);
+            await sleep(5000);
+        }
+        setTagline(intros.english.tagline);
+        resolveName(intros.english.f_name, intros.english.l_name);
+    }
+
     // when the component finishes rendering
     useEffect(() => {
         setShouldShow(true);
-        resolveName();
+        cycleLanguages();
     }, []);
     return(
         <>
@@ -64,8 +98,8 @@ export default function Hero() {
         <Video />
             <Zoom in={shouldShow}>
                 <Box className={styles.intro}>
-                    <Typography align='center' variant='h6'>{"Programmer, Engineer, Gamer"}</Typography>
-                    <Typography align='center' variant="h1">{displayFName}<br />{displayLName}</Typography>
+                    <Typography align='center' variant='h6'>{tagline}</Typography>
+                    <Typography align='center' variant="h1">{FName}<br />{LName}</Typography>
                 </Box>
             </Zoom>
         </Paper>

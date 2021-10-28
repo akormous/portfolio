@@ -1,5 +1,5 @@
 import React from 'react';
-import BGVideo from '../images/sample_video2.mp4'
+import BGVideo from '../images/sample_video3.mp4'
 
 const Video = () => {
     return(
