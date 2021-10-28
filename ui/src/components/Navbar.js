@@ -70,7 +70,7 @@ export default function Navbar() {
                 href={item.href}
                 >{item.name}</Link>
               ))}
-              <SocialLinks />
+              
             </Hidden>
             <Hidden mdUp>
               <IconButton onClick={() => setOpen(true)}>
@@ -106,7 +106,7 @@ export default function Navbar() {
                 >{item.name}</Link>
               </ListItem>
             ))}
-            <SocialLinks />
+            
           </List>
         </SwipeableDrawer>
       </AppBar>

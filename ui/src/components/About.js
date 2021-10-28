@@ -4,6 +4,7 @@ import React from "react";
 import Heading from "./Heading";
 import TechnicalSkills from "./TechnicalSkills";
 import DP from "../images/Avatar.jpg";
+import SocialLinks from "./SocialLinks";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -43,7 +44,7 @@ export default function About() {
             <Heading content="About" />
             <Container maxWidth='lg'>
             <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
+                <Grid align='center' item xs={12} md={6}>
                     <Container>
                         <a target="_blank" href="https://www.twitter.com/akormous">
                         <img className={styles.avatar} src={DP} />
@@ -56,6 +57,7 @@ export default function About() {
                     I'm a Software Developer at <Link color="inherit" to="https://amadeus.com/en">{"Amadeus IT Group"}</Link> in Bengaluru, IN.<br />
                     I have a passion to solve problems.
                     </Typography>
+                    <SocialLinks />
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <TechnicalSkills />
