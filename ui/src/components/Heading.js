@@ -8,8 +8,8 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         display: 'flex',
         flexDirection: 'column',
-        paddingTop: theme.spacing(6),
-        paddingBottom: theme.spacing(6)
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8)
     },
 }));
 
@@ -17,7 +17,7 @@ export default function Heading(props) {
     const styles = useStyles();
     return(
         <Container className={styles.heading} maxWidth='lg'>
-            <Typography variant="h3">{props.content}</Typography>
+            <Typography variant="h2">{props.content}</Typography>
         </Container>
     );
 }

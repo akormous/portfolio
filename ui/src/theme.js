@@ -12,13 +12,10 @@ const h1 = {
   },
 }
 
-const h3 = {
-  fontWeight: 500,
+const h2 = {
+  fontWeight: 600,
   [breakpoints.up("xs")]: {
     fontSize: "2rem"
-  },
-  [breakpoints.up('md')]: {
-    fontSize: '4rem',
   },
 }
 
@@ -40,6 +37,11 @@ let theme = createTheme({
           default: '#000000',
           paper: '#272626',
         },
+        lightbackground: {
+          default: '#f5f5f5',
+          paper: '#f5f5f5',
+          text: '#000000'
+        }
         
     },
     typography: {
@@ -56,7 +58,7 @@ let theme = createTheme({
         '"Segoe UI Symbol"',
       ].join(','),
       h1: h1,
-      h3: h3,
+      h2: h2,
     },
 })
 theme = responsiveFontSizes(theme);

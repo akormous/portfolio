@@ -7,13 +7,14 @@ import Heading from './Heading';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        background: theme.palette.primary.dark,
+        background: theme.palette.lightbackground.default,
+        color: theme.palette.lightbackground.text,
         borderRadius: 0,
         alignItems: 'start',
         justifyContent: 'center',
         flexDirection: 'column',
         display: 'flex',
-        paddingBottom: theme.spacing(4),
+        paddingBottom: theme.spacing(12),
     },
     
     content: {

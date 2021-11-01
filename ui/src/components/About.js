@@ -8,13 +8,13 @@ import SocialLinks from "./SocialLinks";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        background: theme.palette.secondary.dark,
+        background: theme.palette.primary.dark,
         borderRadius: 0,
         alignItems: 'center',
         justifyContent: 'start',
         flexDirection: 'column',
         display: 'flex',
-        paddingBottom: theme.spacing(4),
+        paddingBottom: theme.spacing(12),
         height: "100%",
         width: "100%"
     },
