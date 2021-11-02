@@ -5,6 +5,7 @@ import ProfessionalExperience from "../components/ProfessionalExperience"
 import About from "../components/About"
 import Projects from "../components/Projects"
 import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 // markup
 const IndexPage = () => {
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <ProfessionalExperience />
       <Projects />
       <Contact />
+      <Footer />
   </>     
     
     
