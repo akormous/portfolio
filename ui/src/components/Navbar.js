@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks";
 import { Hidden } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { SwipeableDrawer } from "@material-ui/core";
-import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
+import { EmojiPeopleIcon, StorefrontSharp } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,7 +59,7 @@ export default function Navbar() {
       <AppBar className={styles.root} position='fixed'>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <Typography className={styles.logo} variant="caption">Under Construction</Typography>
+            <StorefrontSharp /><Typography className={styles.logo} variant="caption">Under Construction</Typography>
             <Hidden smDown>
               {navLinks.map((item) => (
                 <Link 
