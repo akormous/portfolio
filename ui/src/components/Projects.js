@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         paddingBottom: theme.spacing(12),
         height: "100%",
-        width: "100%"
+        width: "100%",
     },
     avatarContainer: {
         alignItems: 'center',
@@ -61,7 +61,9 @@ export default function Projects() {
                 
                 <Grid item xs={12} md={4}>
                     <Card className={styles.projectCard}>
-                        <CardActionArea>
+                        <CardActionArea
+                        onClick={() => window.open('https://github.com/akormous/portfolio')}
+                        >
                             <CardMedia
                             component="img"
                             height="140"
@@ -91,7 +93,9 @@ export default function Projects() {
                 </Grid>
                 <Grid item xs={12} md={4}>
                     <Card className={styles.projectCard}>
-                        <CardActionArea>
+                        <CardActionArea
+                        onClick={() => window.open('https://github.com/akormous/Real-Time-Mask-Detection-and-Analysis-System')}
+                        >
                             <CardMedia
                             component="img"
                             height="140"
@@ -116,7 +120,9 @@ export default function Projects() {
                 </Grid>
                 <Grid item xs={12} md={4}>
                     <Card className={styles.projectCard}>
-                        <CardActionArea>
+                        <CardActionArea
+                        onClick={() => window.open('https://github.com/akormous/sharify')}
+                        >
                             <CardMedia
                             component="img"
                             height="140"
