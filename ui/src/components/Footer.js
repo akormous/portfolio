@@ -1,11 +1,7 @@
-import { Link, makeStyles } from "@material-ui/core";
-import { Paper, Container, Grid, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+import { Paper, Container, Typography } from "@material-ui/core";
 import React from "react";
-import Heading from "./Heading";
-import TechnicalSkills from "./TechnicalSkills";
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import SocialLinks from "./SocialLinks";
-import CopyrightSharpIcon from '@material-ui/icons/CopyrightSharp';
 
 const useStyles = makeStyles((theme) => ({
     root: {

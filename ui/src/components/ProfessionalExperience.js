@@ -1,8 +1,7 @@
-import { Grid, Paper, Container } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from "@material-ui/styles"
 import JobExperience from './JobExperience';
-import TechnicalSkills from './TechnicalSkills';
 
 const useStyles = makeStyles((theme) => ({
     root: {

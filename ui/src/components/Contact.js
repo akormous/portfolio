@@ -1,12 +1,7 @@
-import { Card, CardActionArea, CardActions, CardContent, CardMedia, Link, makeStyles, TextField, Box } from "@material-ui/core";
-import { Paper, Container, Grid, Typography, Button, IconButton } from "@material-ui/core";
+import { Link, makeStyles, TextField } from "@material-ui/core";
+import { Paper, Container, Typography, Button } from "@material-ui/core";
 import React from "react";
 import Heading from "./Heading";
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LanguageSharpIcon from '@material-ui/icons/LanguageSharp';
-/* Preview images */
-import FaceMaskDetection from "../images/facemaskdetection.png";
-import Sharify from "../images/sharify.png";
 
 const useStyles = makeStyles((theme) => ({
     root: {
