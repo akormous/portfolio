@@ -1,4 +1,4 @@
-import { Card, CardActionArea, CardActions, CardContent, CardMedia, Link, makeStyles, Tooltip } from "@material-ui/core";
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, Chip, Stack, makeStyles, Tooltip, Box } from "@material-ui/core";
 import { Paper, Container, Grid, Typography, Button, IconButton } from "@material-ui/core";
 import React from "react";
 import Heading from "./Heading";
@@ -7,6 +7,7 @@ import LanguageSharpIcon from '@material-ui/icons/LanguageSharp';
 /* Preview images */
 import FaceMaskDetection from "../images/facemaskdetection.png";
 import Sharify from "../images/sharify.png";
+import theme from "../theme";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -37,24 +38,27 @@ const useStyles = makeStyles((theme) => ({
             'opacity': "0.9"
         }
     },
-    project: {
-        transition: 'all 0.2s',
-        '&:hover': {
-            'opacity': "0.3"
-        }
-    },
     projectCard: {
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
+    },
+    techStack: {
+        height: '100%',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    technologyStackChip: {
+        marginRight: '4px',
     }
 }));
 
 export default function Projects() {
     const styles = useStyles();
     return(
-        <Paper className={styles.root}>
+        <Paper className={styles.root} id="projects">
             <Heading content="Projects" />
             <Container maxWidth='lg'>
             <Grid container spacing={4}>
@@ -73,22 +77,15 @@ export default function Projects() {
                             <CardContent>
                                 <Typography variant="h5">Portfolio Website</Typography>
                                 <Typography variant="caption">
-                                Built with GatsbyJS and Express
+                                A single page application showcasing my professional experience, projects, skills and interests. 
                                 </Typography>
                             </CardContent>
+                            
                         </CardActionArea>
-                        <CardActions>
-                            <Tooltip title="Visit">
-                            <IconButton className={styles.button} onClick={() => window.open('https://akormous.netlify.app')} >
-                                <LanguageSharpIcon fontSize="medium" />
-                            </IconButton>
-                            </Tooltip>
-                            <Tooltip title="Github">
-                            <IconButton className={styles.button} onClick={() => window.open('https://github.com/akormous/portfolio')} >
-                                <GitHubIcon fontSize="medium" />
-                            </IconButton>
-                            </Tooltip>
-                        </CardActions>
+                        <CardContent>
+                            <Chip className={styles.technologyStackChip} label="GatsbyJS" style={{background: theme.palette.gatsby}} />
+                            <Chip className={styles.technologyStackChip} label="Material Design" style={{background: theme.palette.css}} />
+                        </CardContent>
                     </Card>
                 </Grid>
                 <Grid item xs={12} md={4}>
@@ -105,17 +102,15 @@ export default function Projects() {
                             <CardContent>
                                 <Typography variant="h5">Face Mask Detection and Analysis</Typography>
                                 <Typography variant="caption">
-                                A web application providing automatic surveillance that checks for face masks worn by people. 
+                                A web application providing automatic surveillance that checks for face masks worn by people. Helps in enforcing COVID-19 guidelines at a crowded place.
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
-                        <CardActions>
-                            <Tooltip title="Github">
-                            <IconButton className={styles.button} onClick={() => window.open('https://github.com/akormous/Real-Time-Mask-Detection-and-Analysis-System')} >
-                                <GitHubIcon fontSize="medium" />
-                            </IconButton>
-                            </Tooltip>
-                        </CardActions>
+                        <CardContent>
+                            <Chip className={styles.technologyStackChip} label="Python-Django" style={{background: theme.palette.python}} />
+                            <Chip className={styles.technologyStackChip} label="Tensorflow" style={{background: theme.palette.tensorflow}} />
+                            <Chip className={styles.technologyStackChip} label="ReactJS" style={{background: theme.palette.react}} />
+                        </CardContent>
                     </Card>
                 </Grid>
                 <Grid item xs={12} md={4}>
@@ -132,17 +127,16 @@ export default function Projects() {
                             <CardContent>
                                 <Typography variant="h5">Spotify Songs Sharing App</Typography>
                                 <Typography variant="caption">
-                                A web application providing automatic surveillance that checks for face masks worn by people. 
+                                A song sharing service that enables sharing of playlists from Spotify to main feed in the form of posts.
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
-                        <CardActions>
-                            <Tooltip title="Github">
-                            <IconButton className={styles.button} onClick={() => window.open('https://github.com/akormous/sharify')} >
-                                <GitHubIcon fontSize="medium" />
-                            </IconButton>
-                            </Tooltip>
-                        </CardActions>
+                        <CardContent>
+                            <Chip className={styles.technologyStackChip} label="Python-Django" style={{background: theme.palette.python}} />
+                            <Chip className={styles.technologyStackChip} label="MySQL" style={{background: theme.palette.react}} />
+                            <Chip className={styles.technologyStackChip} label="HTML5" style={{background: theme.palette.html}} />
+                            <Chip className={styles.technologyStackChip} label="CSS" style={{background: theme.palette.css}} />
+                        </CardContent>
                     </Card>
                 </Grid>
             </Grid>

@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 export default function ProfessionalExperience() {
     const styles = useStyles();
     return (
-        <Grid container alignItems="stretch" className={styles.root}>
+        <Grid container alignItems="stretch" className={styles.root} id="experience">
             <Grid className={styles.content} item xs={12}>
                 <JobExperience />
             </Grid>

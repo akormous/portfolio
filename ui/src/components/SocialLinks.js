@@ -6,6 +6,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import YouTubeIcon from '@material-ui/icons/YouTube';
+import EmailIcon from '@material-ui/icons/Email';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,6 +37,9 @@ export default function SocialLinks() {
         
         <IconButton className={styles.button} onClick={() => window.open('https://www.youtube.com/channel/UCvXahJHpat0GJRtGQypOq-A')} >
             <YouTubeIcon fontSize="medium" />
+        </IconButton>
+        <IconButton className={styles.button} onClick={() => window.open('mailto:iamakshatchauhan@gmail.com')} >
+            <EmailIcon fontSize="medium" />
         </IconButton>
         </>
     );

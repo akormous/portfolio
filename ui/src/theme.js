@@ -41,7 +41,14 @@ let theme = createTheme({
           default: '#f5f5f5',
           paper: '#f5f5f5',
           text: '#000000'
-        }
+        },
+        gatsby: '#663399',
+        python: '#306998',
+        react: '#4c768d',
+        tensorflow: '#de7e00',
+        html: '#e44d26',
+        css: '#214ce5',
+        bootstrap: '#563D7C',
         
     },
     typography: {
