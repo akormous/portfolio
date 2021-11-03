@@ -15,10 +15,6 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         height: "100%",
         width: "100%",
-        'transition': 'all 0.20s',
-        '&:hover': {
-            backgroundColor: 'rgba(0, 0, 0, 0.40)'
-        }
     },
     skillCategory: {
         fontWeight: 600,

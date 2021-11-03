@@ -49,10 +49,11 @@ const useStyles = makeStyles((theme) => ({
 export default function Contact() {
     const styles = useStyles();
     return(
-        <Paper className={styles.root}>
-            <Heading content="Contact" />
-            <Typography variant="body1" className={styles.contactIntro}>
-                    Let's create something cool together!
+        <Paper className={styles.root} id="contact">
+            <Heading content="Contact me" />
+            <Typography align="center" variant="body1" className={styles.contactIntro}>
+                    Get in touch, just say hi in the form below :)<br />
+                    or you can send an email at <Link href="mailto:iamakshatchauhan@gmail.com">iamakshatchauhan@gmail.com</Link>
             </Typography>
             <Container align="center" maxWidth='lg'>
                 

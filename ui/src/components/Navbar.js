@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks";
 import { Hidden } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { SwipeableDrawer } from "@material-ui/core";
-import { EmojiPeopleIcon, StorefrontSharp } from '@material-ui/icons';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeopleSharp';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
   link: {
     color: '#ffffff',
     marginRight: theme.spacing(6),
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
     '&:hover': {
       color: '#5e615f'
     }
@@ -42,10 +44,16 @@ const useStyles = makeStyles((theme) => ({
 
 const navLinks = [
   {
-    name: "About", href: ""
+    name: "About", href: "#about"
   },
   {
-    name: "Contact", href: ""
+    name: "Experience", href: "#experience"
+  },
+  {
+    name: "Projects", href: "#projects"
+  },
+  {
+    name: "Contact", href: "#contact"
   },
   {
     name: "Resume", href: ""
@@ -59,7 +67,7 @@ export default function Navbar() {
       <AppBar className={styles.root} position='fixed'>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <StorefrontSharp /><Typography className={styles.logo} variant="caption">Under Construction</Typography>
+            <Typography className={styles.logo} variant="caption">Under Construction</Typography>
             <Hidden smDown>
               {navLinks.map((item) => (
                 <Link 

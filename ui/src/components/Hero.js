@@ -31,22 +31,22 @@ const intros = {
     english: {
         f_name: "Akshat",
         l_name: "Chauhan",
-        tagline: "Programmer, Engineer, Gamer"
+        tagline: "Hi, my name is"
     },
     japanese: {
         f_name: "アクシャット",
         l_name: "チョウアン",
-        tagline: "プログラマー、エンジニア、ゲーマー"
+        tagline: "こんにちは、私の名前は"
     },
     hindi: {
         f_name: "अक्षत",
         l_name: "चौहान",
-        tagline: "प्रोग्रामर, इंजीनियर, गेमर"
+        tagline: "नमस्ते, मेरा नाम है"
     },
     russian: {
         f_name: "Акшат",
         l_name: "Чаухан",
-        tagline: "Программист, инженер, геймер"
+        tagline: "Привет, меня зовут"
     },
 };
 

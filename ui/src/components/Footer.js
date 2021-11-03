@@ -5,6 +5,7 @@ import Heading from "./Heading";
 import TechnicalSkills from "./TechnicalSkills";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import SocialLinks from "./SocialLinks";
+import CopyrightSharpIcon from '@material-ui/icons/CopyrightSharp';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,11 +32,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer() {
     const styles = useStyles();
+    const year = new Date().getFullYear();
     return (
         <Paper className={styles.root}>
-            
             <Container align="center" maxWidth='lg'>
-                <Typography variant="body1">Built with GatsbyJS</Typography>
+                <Typography variant="body1">Akshat Chauhan © {year}</Typography>
             <SocialLinks />
             </Container>
         </Paper>
