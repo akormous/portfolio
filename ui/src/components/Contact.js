@@ -1,7 +1,8 @@
-import { Link, makeStyles, TextField } from "@material-ui/core";
+import { Link, makeStyles, Snackbar, TextField } from "@material-ui/core";
 import { Paper, Container, Typography, Button } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import Heading from "./Heading";
+import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -43,6 +44,44 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Contact() {
     const styles = useStyles();
+
+    const [name,setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const [open, setOpen] = useState(false);
+    const handleClose = (event, reason) => {
+        setOpen(false);
+    };
+    
+    let resetForm = () => {
+        setName("");
+        setEmail("");
+        setMessage("");
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+    }
+    function handleSubmit(e) {
+        e.preventDefault();
+        const params = {
+            name: name,
+            email: email,
+            message: message
+        }
+        
+        emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, params, process.env.EMAILJS_USER_ID)
+        .then((result) => {
+            console.log(result.text);
+            setOpen(true);
+        }, (error) => {
+            console.log(error.text);
+        });;
+        
+        setOpen(true);
+        resetForm();
+    }
+
     return(
         <Paper className={styles.root} id="contact">
             <Heading content="Contact me" />
@@ -51,7 +90,6 @@ export default function Contact() {
                     or you can send an email at <Link href="mailto:iamakshatchauhan@gmail.com">iamakshatchauhan@gmail.com</Link>
             </Typography>
             <Container align="center" maxWidth='lg'>
-                
                 <Container maxWidth="xs" className={styles.form}>
                     <TextField
                     focused
@@ -63,6 +101,7 @@ export default function Contact() {
                     InputProps={{
                         className: styles.textField
                     }}
+                    onChange={e => setName(e.target.value)}
                     />
                     <TextField
                     focused
@@ -74,6 +113,7 @@ export default function Contact() {
                     InputProps={{
                         className: styles.textField
                     }}
+                    onChange={e => setEmail(e.target.value)}
                     />
                     <TextField
                     focused
@@ -87,16 +127,18 @@ export default function Contact() {
                     InputProps={{
                         className: styles.textField
                     }}
+                    onChange={e => setMessage(e.target.value)}
                     />
                 </Container>
                 <Button
                 className={styles.button} 
                 variant="contained"
+                onClick={(e) => handleSubmit(e)}
                 >
                     Submit
                 </Button>
-
             </Container>
+            <Snackbar open={open} autoHideDuration={3000} message="Message sent. I will respond within 24 hours!" onClose={handleClose} />
         </Paper>
     );
 }
