@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
-import { Container, Accordion, Box, AccordionSummary, AccordionDetails, Paper, Typography, Slider, Grid } from '@material-ui/core';
-import { makeStyles, mergeClasses } from '@material-ui/styles';
-import ExpandMoreSharpIcon from '@material-ui/icons/ExpandMoreSharp';
-import FiberManualRecordSharpIcon from '@material-ui/icons/FiberManualRecordSharp';
+import React from 'react';
+import { Container, Box, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 import SkillRating from './SkillRating';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        background: 'rgba(0, 0, 0, 0.10)',
         borderRadius: 0,
         alignItems: 'center',
         justifyContent: 'center',
@@ -15,10 +12,6 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         height: "100%",
         width: "100%",
-        'transition': 'all 0.20s',
-        '&:hover': {
-            backgroundColor: 'rgba(0, 0, 0, 0.40)'
-        }
     },
     skillCategory: {
         fontWeight: 600,
@@ -40,12 +33,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function TechnicalSkills() {
-    // for accordion panels
-    const [expanded, setExpanded] = useState(false);
 
-    const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
-    };
     const styles = useStyles();
     return(
         <Container className={styles.root}>

@@ -1,4 +1,4 @@
-import { Container, makeStyles, Typography, Paper, Divider } from '@material-ui/core';
+import { Container, makeStyles, Typography, Paper, List, ListItem } from '@material-ui/core';
 import React from 'react';
 import {Timeline, TimelineDot, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent} from '@material-ui/lab';
 import FlightSharpIcon from '@material-ui/icons/FlightSharp';
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 600
     },
     designation: {
-        color: theme.palette.secondary.extralight
+        color: theme.palette.primary.light
     },
     divider: {
         margin: theme.spacing(2),
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     },
     oppositeContent: {
         flex: 0
-    }
+    },
 }));
 
 export default function JobExperience(props) {
@@ -53,7 +53,7 @@ export default function JobExperience(props) {
         <Paper className={styles.root}>
 
         
-            <Container maxWidth='lg'>
+            <Container maxWidth='md'>
                 <Heading content="Experience" />
                 <Timeline align="left" position="right">
                     <TimelineItem>
@@ -72,11 +72,21 @@ export default function JobExperience(props) {
                         Software Engineer
                         </Typography>
                         <Typography variant="caption">
-                        Aug 2021 - present
+                        Aug 2021 - Present
                         </Typography>
-                        <Typography align='justify' variant="body2">
-                        Working as a C++ Developer in PAYMENTS teams
-                        </Typography>
+                        <List disablePadding>
+                            <ListItem disableGutters>
+                                <Typography align='justify' variant="body2">
+                                Working as a C++ Developer in PAYMENTS team.
+                                </Typography>
+                            </ListItem>
+                            <ListItem disableGutters>
+                                <Typography align='justify' variant="body2">
+                                Contributing to PCI-DSS compliance of Amadeus applications.
+                                </Typography>
+                            </ListItem>
+                        </List>
+                        
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
@@ -97,10 +107,23 @@ export default function JobExperience(props) {
                         <Typography variant="caption">
                         Jan 2021 - Jun 2021
                         </Typography>
-                        <Typography align='justify' variant="body2">
-                        Built a web application that simplified testing workflow of Amadeus Payment scenarios.
-                        Developed using React, Redux and Express.js
-                        </Typography>
+                        <List disablePadding>
+                            <ListItem disableGutters>
+                                <Typography align='justify' variant="body2">
+                                Built a platform that automates Amadeus Payment Test Scenarios.
+                                </Typography>
+                            </ListItem>
+                            <ListItem disableGutters>
+                                <Typography align='justify' variant="body2">
+                                Reduced analysis time and error investigation time by 50%
+                                </Typography>
+                            </ListItem>
+                            <ListItem disableGutters>
+                                <Typography align='justify' variant="body2">
+                                Developed using React, Redux, and Express.js
+                                </Typography>
+                            </ListItem>
+                        </List>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
@@ -120,11 +143,23 @@ export default function JobExperience(props) {
                         <Typography variant="caption">
                         May 2020 - Jun 2020
                         </Typography>
-                        <Typography align='justify' variant="body2">
-                        Learnt to work with data and manipulate it using Pandas Library,
-                        visualizing results using MatplotLib.                            
-                        Applied Machine Learning Algorithms (Regression, Classification and Clustering) on past stock market data.
-                        </Typography>
+                        <List disablePadding>
+                            <ListItem disableGutters>
+                                <Typography align='justify' variant="body2">
+                                Applied machine learning algorithms on stock market data to gain insights such as Beta value of a stock, future stock prices, Efficient Frontier, and correlation between stocks.
+                                </Typography>
+                            </ListItem>
+                            <ListItem disableGutters>
+                                <Typography align='justify' variant="body2">
+                                Identified trade calls using Bollinger Bands and Simple Moving Averages
+                                </Typography>
+                            </ListItem>
+                            <ListItem disableGutters>
+                                <Typography align='justify' variant="body2">
+                                Developed using Python, Numpy, Pandas, Matplotlib, Sci-kit learn
+                                </Typography>
+                            </ListItem>
+                        </List>
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>

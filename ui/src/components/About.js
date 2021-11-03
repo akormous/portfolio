@@ -30,25 +30,19 @@ const useStyles = makeStyles((theme) => ({
         objectFit: 'cover',
         marginBottom: '10px',
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2),  0 4px 8px 0 rgba(0, 0, 0, 0.2)',
-        transition: 'all 0.2s',
-        '&:hover': {
-            'opacity': "0.9"
-        }
     },
 }));
 
 export default function About() {
     const styles = useStyles();
     return(
-        <Paper className={styles.root}>
+        <Paper className={styles.root} id="about">
             <Heading content="About" />
             <Container maxWidth='lg'>
             <Grid container spacing={2}>
                 <Grid align='center' item xs={12} md={6}>
                     <Container>
-                        <a target="_blank" href="https://www.twitter.com/akormous">
-                        <img className={styles.avatar} src={DP} />
-                        </a>
+                        <img className={styles.avatar} src={DP} alt="Imagine me in the himalayas" />
                     </Container>
                     <Typography align="center" variant="h5">
                         Who's this guy?
