@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Heading from "./Heading";
 import emailjs from 'emailjs-com';
 
-const EMAILJS_USER_ID="user_G2Z9EERI7U2dqcMkGsbAr";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -72,7 +71,7 @@ export default function Contact() {
             message: message
         }
         
-        emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, params, EMAILJS_USER_ID)
+        emailjs.send(process.env.GATSBY_EMAILJS_SERVICE_ID, process.env.GATSBY_EMAILJS_TEMPLATE_ID, params, process.env.GATSBY_EMAILJS_USER_ID)
         .then((result) => {
             console.log(result.text);
             setOpen(true);
