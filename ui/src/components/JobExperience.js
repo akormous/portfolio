@@ -1,4 +1,4 @@
-import { Container, makeStyles, Typography, Paper, Divider, List, ListItem } from '@material-ui/core';
+import { Container, makeStyles, Typography, Paper, List, ListItem } from '@material-ui/core';
 import React from 'react';
 import {Timeline, TimelineDot, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent} from '@material-ui/lab';
 import FlightSharpIcon from '@material-ui/icons/FlightSharp';
@@ -75,12 +75,12 @@ export default function JobExperience(props) {
                         Aug 2021 - Present
                         </Typography>
                         <List disablePadding>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem disableGutters>
                                 <Typography align='justify' variant="body2">
                                 Working as a C++ Developer in PAYMENTS team.
                                 </Typography>
                             </ListItem>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem disableGutters>
                                 <Typography align='justify' variant="body2">
                                 Contributing to PCI-DSS compliance of Amadeus applications.
                                 </Typography>
@@ -108,17 +108,17 @@ export default function JobExperience(props) {
                         Jan 2021 - Jun 2021
                         </Typography>
                         <List disablePadding>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem disableGutters>
                                 <Typography align='justify' variant="body2">
                                 Built a platform that automates Amadeus Payment Test Scenarios.
                                 </Typography>
                             </ListItem>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem disableGutters>
                                 <Typography align='justify' variant="body2">
                                 Reduced analysis time and error investigation time by 50%
                                 </Typography>
                             </ListItem>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem disableGutters>
                                 <Typography align='justify' variant="body2">
                                 Developed using React, Redux, and Express.js
                                 </Typography>
@@ -144,17 +144,17 @@ export default function JobExperience(props) {
                         May 2020 - Jun 2020
                         </Typography>
                         <List disablePadding>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem disableGutters>
                                 <Typography align='justify' variant="body2">
                                 Applied machine learning algorithms on stock market data to gain insights such as Beta value of a stock, future stock prices, Efficient Frontier, and correlation between stocks.
                                 </Typography>
                             </ListItem>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem disableGutters>
                                 <Typography align='justify' variant="body2">
                                 Identified trade calls using Bollinger Bands and Simple Moving Averages
                                 </Typography>
                             </ListItem>
-                            <ListItem disablePadding disableGutters>
+                            <ListItem disableGutters>
                                 <Typography align='justify' variant="body2">
                                 Developed using Python, Numpy, Pandas, Matplotlib, Sci-kit learn
                                 </Typography>

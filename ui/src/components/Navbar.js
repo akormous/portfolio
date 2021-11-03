@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { AppBar, Toolbar, IconButton, Link, Typography, List, ListItem, Divider, Button, Container } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
-import SocialLinks from "./SocialLinks";
 import { Hidden } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { SwipeableDrawer } from "@material-ui/core";
