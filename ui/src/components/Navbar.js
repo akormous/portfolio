@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   logo: {
+    fontWeight: 700,
     marginRight: 'auto',
     padding: theme.spacing(2)
   },
@@ -66,7 +67,7 @@ export default function Navbar() {
       <AppBar className={styles.root} position='fixed'>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <Typography className={styles.logo} variant="caption">Under Construction</Typography>
+            <Typography className={styles.logo} variant="h5">AC</Typography>
             <Hidden smDown>
               {navLinks.map((item) => (
                 <Link 
