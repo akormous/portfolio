@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Heading from "./Heading";
 import emailjs from 'emailjs-com';
 
+const EMAILJS_USER_ID="user_G2Z9EERI7U2dqcMkGsbAr";
+
 const useStyles = makeStyles((theme) => ({
     root: {
         background: theme.palette.lightbackground.default,
@@ -70,7 +72,7 @@ export default function Contact() {
             message: message
         }
         
-        emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, params, process.env.EMAILJS_USER_ID)
+        emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, params, EMAILJS_USER_ID)
         .then((result) => {
             console.log(result.text);
             setOpen(true);
@@ -138,7 +140,7 @@ export default function Contact() {
                     Submit
                 </Button>
             </Container>
-            <Snackbar open={open} autoHideDuration={3000} message="Message sent. I will respond within 24 hours!" onClose={handleClose} />
+            <Snackbar open={open} autoHideDuration={3000} message="Message sent. Akshat will respond within 24 hours!" onClose={handleClose} />
         </Paper>
     );
 }
