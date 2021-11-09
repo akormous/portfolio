@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/styles"
 import { Hidden } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { SwipeableDrawer } from "@material-ui/core";
-import EmojiPeopleIcon from '@material-ui/icons/EmojiPeopleSharp';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   
   easteregg: {
     color: '#f2fafa',
-    background: 'linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)',
+    background: 'linear-gradient(90deg, #d53369 0%, #daae51 100%);',
     margin: theme.spacing(1)
   },
   link: {
@@ -38,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2)
   },
   drawer: {
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
+    minWidth: '250px'
   }
 }));
 
@@ -55,9 +55,6 @@ const navLinks = [
   {
     name: "Contact", href: "#contact"
   },
-  {
-    name: "Resume", href: ""
-  }
 ]
 
 export default function Navbar() {
@@ -96,13 +93,13 @@ export default function Navbar() {
 
         >
           <List>
-            <EmojiPeopleIcon /><br />
+          
               <Typography variant="caption">
-                {"Hello visitor, welcome to my website."}<br /> 
-                {"Click here to reveal your easter egg."}
+                {"Hello visitor,"}<br /> 
+                {"Click here for good luck! 😉"}
               </Typography>
               <br />
-              <Button className={styles.easteregg} onClick={() => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}>Easter Egg</Button>
+              <Button className={styles.easteregg} onClick={() => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}>Free Luck 🍀</Button>
               <Divider />
             {navLinks.map((item) => (
               <ListItem key={item.name}>
@@ -111,6 +108,7 @@ export default function Navbar() {
                 variant="button"
                 underline="none"
                 href={item.href}
+                onClick={() => setOpen(false)}
                 >{item.name}</Link>
               </ListItem>
             ))}
