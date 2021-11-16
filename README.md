@@ -11,6 +11,14 @@ Drop a message here => [FEEDBACK / CONTACT](https://akormous.netlify.app/#contac
 3. Latest Instagram Post
 4. cool ideas and stuff idk    
 
+### Improvements to do
+
+**Next Iteration** - 15 Dec 2021
+|Feedback|Reason|Feasibility Check|
+|---|---|---|
+|Replace "AC" in navbar to full name|doesnt look cool|:heavy_check_mark:
+
+
 ## Built with 
 - [Gatsby](https://www.gatsbyjs.com/)
 - [Express](https://expressjs.com/)
