@@ -14,9 +14,9 @@ Drop a message here => [FEEDBACK / CONTACT](https://akormous.netlify.app/#contac
 ### Improvements to do
 
 **Next Iteration** - 15 Dec 2021
-|Feedback|Reason|Feasibility Check|
-|---|---|---|
-|Replace "AC" in navbar to full name|doesnt look cool|:heavy_check_mark:
+|Feedback|Reason|Feasibility Check|Implemented|
+|---|---|---|---|
+|Replace "AC" in navbar to full name|doesnt look cool|:heavy_check_mark:|:x:|
 
 
 ## Built with 
