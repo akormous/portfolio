@@ -1,17 +1,24 @@
 ## Portfolio website
 
-### Home page components to do
+If you're reading this, I will really appreciate if you provide feedback on the website that I built.
+Drop a message here => [FEEDBACK / CONTACT](https://akormous.netlify.app/#contact)
 
-1. About
-2. Experience
-3. Projects
-4. Contact
+
 
 ### About page components to do
 1. Favorite Songs from Spotify
 2. Latest Tweet
 3. Latest Instagram Post
-    
+4. cool ideas and stuff idk    
+
+### Improvements to do
+
+**Next Iteration** - 15 Dec 2021
+|Feedback|Reason|Feasibility Check|Implemented|
+|---|---|---|---|
+|Contact form validation|no form validation at present!|:heavy_check_mark:|:x:|
+|Replace "AC" in navbar to full name|doesnt look cool|:heavy_check_mark:|:x:|
+
 
 ## Built with 
 - [Gatsby](https://www.gatsbyjs.com/)
