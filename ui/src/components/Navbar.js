@@ -10,10 +10,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     height: '74px',
     color: 'white',
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
+    backgroundColor: 'rgba(0, 0, 0, 0.45)',
     'transition': 'all 0.20s',
     '&:hover': {
-      backgroundColor: 'rgba(0, 0, 0, 0.40)'
+      backgroundColor: 'rgba(0, 0, 0, 0.60)'
     }
   },
   
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   logo: {
-    fontWeight: 700,
+    fontWeight: 500,
     marginRight: 'auto',
     padding: theme.spacing(2)
   },
@@ -64,7 +64,7 @@ export default function Navbar() {
       <AppBar className={styles.root} position='fixed'>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <Typography className={styles.logo} variant="h5">AC</Typography>
+            <Typography className={styles.logo} variant="body1">Akshat Chauhan</Typography>
             <Hidden smDown>
               {navLinks.map((item) => (
                 <Link 

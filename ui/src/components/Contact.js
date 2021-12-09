@@ -3,6 +3,7 @@ import { Paper, Container, Typography, Button } from "@material-ui/core";
 import React, { useState } from "react";
 import Heading from "./Heading";
 import emailjs from 'emailjs-com';
+import Alert from "@material-ui/lab/Alert";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -39,9 +40,21 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             backgroundColor: theme.palette.primary.light,
         }
+    },
+    erralert: {
+        color: 'white',
     }
     
 }));
+
+// bool function: for email validation
+const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
 
 export default function Contact() {
     const styles = useStyles();
@@ -54,7 +67,9 @@ export default function Contact() {
     const handleClose = (event, reason) => {
         setOpen(false);
     };
-    const [erropen, setErrOpen] = useState(false);  // for error message
+
+    const [errmsg, setErrMsg] = useState("");    // for error message
+    const [erropen, setErrOpen] = useState(false);  
     const handleErrClose = (event, reason) => {
         setErrOpen(false);
     };
@@ -72,8 +87,18 @@ export default function Contact() {
     function handleSubmit(e) {
         e.preventDefault();
         // form validation
+        // if any of the fields is empty
         if(name === "" || email === "" || message === "") {
             setErrOpen(true);
+            setErrMsg("Please enter:" + 
+                        (name === "" ? " Name" : "") + 
+                        (email === "" ? " Email" : "") + 
+                        (message === "" ? " Message" : "") + ".") ;
+            return;
+        }
+        if(!validateEmail(email)) {
+            setErrOpen(true);
+            setErrMsg("Invalid Email.");
             return;
         }
         const params = {
@@ -152,8 +177,12 @@ export default function Contact() {
                     Submit
                 </Button>
             </Container>
-            <Snackbar open={open} autoHideDuration={3000} message="Message sent. Akshat will respond within 24 hours!" onClose={handleClose} />
-            <Snackbar open={erropen} autoHideDuration={3000} message="Please enter name, email and a message." onClose={handleErrClose} />
+            <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+                <Alert className={styles.erralert} severity="success">Message sent. Akshat will respond within 24 hours.</Alert>
+            </Snackbar>
+            <Snackbar open={erropen} autoHideDuration={3000} onClose={handleErrClose} >
+                <Alert className={styles.erralert} severity="error">{errmsg}</Alert>
+            </Snackbar>
         </Paper>
     );
 }
