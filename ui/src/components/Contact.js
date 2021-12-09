@@ -46,15 +46,20 @@ const useStyles = makeStyles((theme) => ({
 export default function Contact() {
     const styles = useStyles();
 
-    const [name,setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+    const [name,setName] = useState("");    // name
+    const [email, setEmail] = useState(""); // email
+    const [message, setMessage] = useState(""); // message
 
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false);    // for success message
     const handleClose = (event, reason) => {
         setOpen(false);
     };
+    const [erropen, setErrOpen] = useState(false);  // for error message
+    const handleErrClose = (event, reason) => {
+        setErrOpen(false);
+    };
     
+    // reset the form
     let resetForm = () => {
         setName("");
         setEmail("");
@@ -63,14 +68,19 @@ export default function Contact() {
         document.getElementById("email").value = "";
         document.getElementById("message").value = "";
     }
+    // handle submit of contact form
     function handleSubmit(e) {
         e.preventDefault();
+        // form validation
+        if(name === "" || email === "" || message === "") {
+            setErrOpen(true);
+            return;
+        }
         const params = {
             name: name,
             email: email,
             message: message
         }
-        
         emailjs.send(process.env.GATSBY_EMAILJS_SERVICE_ID, process.env.GATSBY_EMAILJS_TEMPLATE_ID, params, process.env.GATSBY_EMAILJS_USER_ID)
         .then((result) => {
             console.log(result.text);
@@ -106,9 +116,11 @@ export default function Contact() {
                     onChange={e => setName(e.target.value)}
                     />
                     <TextField
+                    
                     focused
                     fullWidth
                     className={styles.inputField}
+                    type="email"
                     id="email"
                     label="Email"
                     variant="standard"
@@ -141,6 +153,7 @@ export default function Contact() {
                 </Button>
             </Container>
             <Snackbar open={open} autoHideDuration={3000} message="Message sent. Akshat will respond within 24 hours!" onClose={handleClose} />
+            <Snackbar open={erropen} autoHideDuration={3000} message="Please enter name, email and a message." onClose={handleErrClose} />
         </Paper>
     );
 }
