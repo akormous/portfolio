@@ -64,7 +64,7 @@ export default function Navbar() {
       <AppBar className={styles.root} position='fixed'>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <Typography className={styles.logo} variant="body1">Akshat Chauhan</Typography>
+            <Typography className={styles.logo} variant="body2">AKSHAT CHAUHAN</Typography>
             <Hidden smDown>
               {navLinks.map((item) => (
                 <Link 
