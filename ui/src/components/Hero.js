@@ -4,6 +4,9 @@ import { Box, Paper, Typography, Zoom } from "@material-ui/core"
 import {sleep, randomCharacter} from '../utility/common'
 import Video from "./Video"
 
+import intros from "./data/intros.json"
+import LanguageSelector from "./LanguageSelector"
+
 const useStyles = makeStyles((theme) => ({
     root: {
         position: 'relative',
@@ -27,28 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const intros = {
-    english: {
-        f_name: "Akshat",
-        l_name: "Chauhan",
-        tagline: "Hi, my name is"
-    },
-    japanese: {
-        f_name: "アクシャット",
-        l_name: "チョウアン",
-        tagline: "こんにちは、私の名前は"
-    },
-    hindi: {
-        f_name: "अक्षत",
-        l_name: "चौहान",
-        tagline: "नमस्ते, मेरा नाम है"
-    },
-    russian: {
-        f_name: "Акшат",
-        l_name: "Чаухан",
-        tagline: "Привет, меня зовут"
-    },
-};
+
 
 export default function Hero() {
     const styles = useStyles();
@@ -65,7 +47,7 @@ export default function Hero() {
     const resolveName = async (f_name, l_name) => {
         for(var i = 0; i < Math.max(f_name.length, l_name.length); ++i) {
             for(var j = 0; j < 10; j++) {
-                await sleep(5);
+                await sleep(0.5);
                 setFName(randomCharacter() + f_name.slice(f_name.length - i, f_name.length));
                 setLName(l_name.slice(0, i) + randomCharacter());
             }
@@ -74,23 +56,30 @@ export default function Hero() {
         setLName(l_name);
     }
     
+    // set intro - sets tagiline and name
+    const setIntro = (lang) => {
+        setTagline(intros[lang].tagline);
+        resolveName(intros[lang].f_name, intros[lang].l_name)
+    }
+
     // cycles through multiple languages
     const cycleLanguages = async () => {
         for(var lang in intros) {
-            if(!intros.hasOwnProperty(lang))    continue;
+            if(!intros.hasOwnProperty(lang))
+                continue;
+
             var intro = intros[lang];
-            setTagline(intro.tagline);
-            resolveName(intro.f_name, intro.l_name);
-            await sleep(5000);
+            setIntro(lang);
+
+            await sleep(3000);
         }
-        setTagline(intros.english.tagline);
-        resolveName(intros.english.f_name, intros.english.l_name);
+        setIntro("english");
     }
 
     // when the component finishes rendering
     useEffect(() => {
         setShouldShow(true);
-        cycleLanguages();
+        setIntro("english");
     }, []);
     return(
         <>
@@ -100,6 +89,7 @@ export default function Hero() {
                 <Box className={styles.intro}>
                     <Typography align='center' variant='h6'>{tagline}</Typography>
                     <Typography align='center' variant="h1">{FName}<br />{LName}</Typography>
+                    <LanguageSelector setIntro={setIntro} />
                 </Box>
             </Zoom>
         </Paper>
