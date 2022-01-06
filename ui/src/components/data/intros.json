@@ -1,0 +1,51 @@
+{
+    "english": {
+        "language": "english",
+        "label": "English",
+        "tagline": "Hi, my name is",
+        "f_name": "Akshat",
+        "l_name": "Chauhan"
+    },
+    "japanese": {
+        "language": "japanese",
+        "label": "日本語",
+        "tagline": "こんにちは、私の名前は",
+        "f_name": "アクシャット",
+        "l_name": "チョウアン"
+    },
+    "spanish": {
+        "language": "spanish",
+        "label": "española",
+        "tagline": "Hola, mi nombre es",
+        "f_name": "Akshat",
+        "l_name": "Chauhan"
+    },
+    "hindi": {
+        "language": "hindi",
+        "label": "हिन्दी",
+        "tagline": "नमस्ते, मेरा नाम है",
+        "f_name": "अक्षत",
+        "l_name": "चौहान"
+    },
+    "arabic": {
+        "language": "arabic",
+        "label": "عربى",
+        "tagline": "مرحبا \"أسمي هو",
+        "f_name": "اكشوت",
+        "l_name": "شوهان"
+    },
+    "mandarin": {
+        "language": "mandarin",
+        "label": "普通话",
+        "tagline": "你好，我的名字是",
+        "f_name": "阿克沙特",
+        "l_name": "乔汉"
+    },
+    "russian": {
+        "language": "english",
+        "label": "русский",
+        "tagline": "Привет, меня зовут",
+        "f_name": "Акшат",
+        "l_name": "Чаухан"
+    }
+}
