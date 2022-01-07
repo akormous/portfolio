@@ -1,9 +1,13 @@
 import React from 'react';
 import BGVideo from '../images/sample_video4.mp4'
+import Poster from '../images/poster.jpg'
+import LazyLoad from 'react-lazyload'
 
 const Video = () => {
     return(
-        <video autoPlay loop muted
+        <LazyLoad>
+        <video autoPlay loop muted playsInline
+        poster={Poster}
         style={{
             position: 'absolute',
             width: '100%',
@@ -18,6 +22,7 @@ const Video = () => {
         >
             <source src={BGVideo} type="video/mp4" />
         </video>
+        </LazyLoad>
     );
 }
 
