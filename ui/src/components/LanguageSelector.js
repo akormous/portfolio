@@ -68,11 +68,9 @@ export default function LanguageSelector(props) {
                     <DialogContent
                     className={styles.dialogcontent}
                     >
-
-                    
                     {languages.map((lang) => (
                     <Chip
-                    size="small"
+                    size="medium"
                     variant="outlined"
                     label={intros[lang].label}
                     onClick={ () => { props.setIntro(lang); handleClose(); } }
