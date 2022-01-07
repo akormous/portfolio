@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import ProfessionalExperience from "../components/ProfessionalExperience"
@@ -7,9 +7,20 @@ import Projects from "../components/Projects"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
+import LoadingPage from "./loading"
+
 // markup
 const IndexPage = () => {
-  return (
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, []); 
+
+  return loading ? (
+    <LoadingPage />
+  ) : 
+  (
    <>
       <Navbar />
       <Hero />
