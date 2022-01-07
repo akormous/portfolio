@@ -1,5 +1,5 @@
-import { Box, Chip, Hidden, Dialog, makeStyles, MenuItem, Select, DialogContent } from "@material-ui/core";
-import { ToggleButtonGroup, ToggleButton } from "@material-ui/lab";
+import { Box, Chip, Hidden, Dialog, makeStyles, DialogContent } from "@material-ui/core";
+import { ToggleButtonGroup } from "@material-ui/lab";
 import React from "react";
 import intros from "./data/intros.json"
 import TranslateIcon from '@material-ui/icons/Translate';

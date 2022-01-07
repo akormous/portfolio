@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import { makeStyles } from "@material-ui/styles"
 import { Box, Paper, Typography, Fade } from "@material-ui/core"
 import {sleep, randomCharacter} from '../utility/common'
@@ -55,13 +55,14 @@ export default function Hero() {
         setLName(l_name);
     }
     
-    // set intro - sets tagiline and name
-    const setIntro = (lang) => {
+    // set intro - sets tagline and name
+    const setIntro = useCallback ( (lang) => {
         setTagline(intros[lang].tagline);
         resolveName(intros[lang].f_name, intros[lang].l_name)
-    }
+    }, []);
 
     // cycles through multiple languages
+/*
     const cycleLanguages = async () => {
         for(var lang in intros) {
             if(!intros.hasOwnProperty(lang))
@@ -74,12 +75,12 @@ export default function Hero() {
         }
         setIntro("english");
     }
-
+*/
     // when the component finishes rendering
     useEffect(() => {
         setShouldShow(true);
         setIntro("english");
-    }, []);
+    }, [setIntro]);
     return(
         <>
         <Fade in={shouldShow}>
