@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { makeStyles } from "@material-ui/styles"
-import { Box, Paper, Typography, Zoom } from "@material-ui/core"
+import { Box, Paper, Typography, Fade } from "@material-ui/core"
 import {sleep, randomCharacter} from '../utility/common'
 import Video from "./Video"
 
@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         background: 'rgba(0,0,0,0.25)'
     },
-
 }));
 
 
@@ -83,16 +82,16 @@ export default function Hero() {
     }, []);
     return(
         <>
+        <Fade in={shouldShow}>
         <Paper className={styles.root}>
         <Video />
-            <Zoom in={shouldShow}>
-                <Box className={styles.intro}>
-                    <Typography align='center' variant='h6'>{tagline}</Typography>
-                    <Typography align='center' variant="h1">{FName}<br />{LName}</Typography>
-                    <LanguageSelector setIntro={setIntro} />
-                </Box>
-            </Zoom>
+            <Box className={styles.intro}>
+                <Typography align='center' variant='h6'>{tagline}</Typography>
+                <Typography align='center' variant="h1">{FName}<br />{LName}</Typography>
+                <LanguageSelector setIntro={setIntro} />
+            </Box>
         </Paper>
+        </Fade>
       </>
     
     )
