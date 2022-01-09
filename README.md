@@ -1,15 +1,7 @@
 ## Portfolio website
 
 If you're reading this, I will really appreciate if you provide feedback on the website that I built.
-Drop a message here => [FEEDBACK / CONTACT](https://akormous.netlify.app/#contact)
-
-
-
-### About page components to do
-1. Favorite Songs from Spotify
-2. Latest Tweet
-3. Latest Instagram Post
-4. cool ideas and stuff idk    
+Drop a message in the Contact form of the website => [Website](https://akormous.netlify.app/)
 
 ### Improvements to do
 
