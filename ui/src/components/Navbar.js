@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     height: '74px',
     color: 'white',
     backgroundColor: 'rgba(0, 0, 0, 0.45)',
+    backdropFilter: 'blur(4px)',
     'transition': 'all 0.20s',
     '&:hover': {
       backgroundColor: 'rgba(0, 0, 0, 0.60)'
@@ -38,7 +39,9 @@ const useStyles = makeStyles((theme) => ({
   },
   drawer: {
     padding: theme.spacing(2),
-    minWidth: '250px'
+    minWidth: '250px',
+    backgroundColor: 'rgba(0,0,0,0.65)',
+    backdropFilter: 'blur(10px)'
   }
 }));
 
