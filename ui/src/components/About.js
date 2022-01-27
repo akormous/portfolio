@@ -44,12 +44,10 @@ export default function About() {
                     <Container>
                         <img className={styles.avatar} src={DP} alt="Imagine me in the himalayas" />
                     </Container>
-                    <Typography align="center" variant="h5">
-                        Who's this guy?
-                    </Typography>
-                    <Typography align="center" variant="body2">
+                    
+                    <Typography align="center" variant="body1">
                     I'm a Software Developer at <Link color="inherit" to="https://amadeus.com/en">{"Amadeus IT Group"}</Link> in Bengaluru, IN.<br />
-                    I have a passion to solve problems.
+                    I enjoy solving problems.
                     </Typography>
                     <SocialLinks />
                 </Grid>
