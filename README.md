@@ -14,6 +14,7 @@ Drop a message in the Contact form of the website => [Website](https://akormous.
 |Reduce Hero section video size|Hero section video takes a while to load|:heavy_check_mark:|:heavy_check_mark:|
 |Slide transitions when clicking on links|At present, it just jumps to the clicked section, doesn't look smooth|:heavy_check_mark:|:x:|
 |Change font ?|wat|:x:|:x:|
+|Change all info to JSON|yes|:heavy_check_mark:|:x:|
 | | |:end:|:end:|
 
 
