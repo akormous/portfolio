@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(6),
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
+    fontSize: '0.75rem',
     '&:hover': {
       color: '#5e615f'
     }
@@ -67,7 +68,7 @@ export default function Navbar() {
       <AppBar className={styles.root} position='fixed'>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <Typography className={styles.logo} variant="body2">AKSHAT CHAUHAN</Typography>
+            <Typography className={styles.logo} variant="caption">AKSHAT CHAUHAN</Typography>
             <Hidden smDown>
               {navLinks.map((item) => (
                 <Link 

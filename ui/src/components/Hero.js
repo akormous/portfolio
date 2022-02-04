@@ -10,7 +10,7 @@ import LanguageSelector from "./LanguageSelector"
 const useStyles = makeStyles((theme) => ({
     root: {
         position: 'relative',
-        minHeight: '80vh',
+        minHeight: '90vh',
         backgroundColor: 'transparent',
         backgroundSize: 'cover',
         backgrooundRepeat: 'no-repeat',
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         minWidth: '100%',
+        minHeight: '100%',
         height: '100%',
         justifyContent: 'center',
         alignItems: 'center',
@@ -87,7 +88,7 @@ export default function Hero() {
         <Paper className={styles.root}>
         <Video />
             <Box className={styles.intro}>
-                <Typography align='center' variant='h6'>{tagline}</Typography>
+                <Typography align='center' variant='body1'>{tagline}</Typography>
                 <Typography align='center' variant="h1">{FName}<br />{LName}</Typography>
                 <LanguageSelector setIntro={setIntro} />
             </Box>

@@ -3,8 +3,8 @@
         "language": "english",
         "label": "English",
         "tagline": "Hi, my name is",
-        "f_name": "Akshat",
-        "l_name": "Chauhan"
+        "f_name": "AKSHAT",
+        "l_name": "CHAUHAN"
     },
     "japanese": {
         "language": "japanese",
@@ -17,8 +17,8 @@
         "language": "spanish",
         "label": "española",
         "tagline": "Hola, mi nombre es",
-        "f_name": "Akshat",
-        "l_name": "Chauhan"
+        "f_name": "AKSHAT",
+        "l_name": "CHAUHAN"
     },
     "hindi": {
         "language": "hindi",
@@ -42,10 +42,10 @@
         "l_name": "乔汉"
     },
     "russian": {
-        "language": "english",
+        "language": "russian",
         "label": "русский",
         "tagline": "Привет, меня зовут",
-        "f_name": "Акшат",
-        "l_name": "Чаухан"
+        "f_name": "АКШАТ",
+        "l_name": "ЧАУХАН"
     }
 }
