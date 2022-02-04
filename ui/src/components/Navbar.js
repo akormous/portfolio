@@ -5,7 +5,7 @@ import { Hidden } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { SwipeableDrawer } from "@material-ui/core";
 import SocialLinks from "./SocialLinks";
-
+import {Link as ScrollLink} from 'react-scroll';
 const useStyles = makeStyles((theme) => ({
   root: {
     justifyContent: 'center',
@@ -29,10 +29,12 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(6),
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
+    textTransform: 'uppercase',
     fontSize: '0.75rem',
+    cursor: 'default',
     '&:hover': {
       color: '#5e615f',
-    }
+    },
   },
   buttonlink: {
     color: '#ffffff',
@@ -40,6 +42,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '0.75rem',
     width: '100%',
     display: 'flex',
+    cursor: 'default',
+    textTransform: 'uppercase',
     justifyContent: 'left',
     '&:hover': {
       backgroundColor: theme.palette.background.paper
@@ -60,16 +64,16 @@ const useStyles = makeStyles((theme) => ({
 
 const navLinks = [
   {
-    name: "About", href: "#about"
+    name: "About", href: "about"
   },
   {
-    name: "Experience", href: "#experience"
+    name: "Experience", href: "experience"
   },
   {
-    name: "Projects", href: "#projects"
+    name: "Projects", href: "projects"
   },
   {
-    name: "Contact", href: "#contact"
+    name: "Contact", href: "contact"
   },
 ]
 
@@ -83,15 +87,17 @@ export default function Navbar() {
             <Typography className={styles.logo} variant="caption">AKSHAT CHAUHAN</Typography>
             <Hidden smDown>
               {navLinks.map((item) => (
-                <Link 
-                key={item.name}
-                className={styles.link}
-                variant="button"
-                underline="none"
-                href={item.href}
-                >{item.name}</Link>
+                  <ScrollLink
+                   key={item.name}
+                   className={styles.link}
+                   to={item.href}
+                   spy={true}
+                   smooth={true}
+                   duration={300}
+                  >
+                  {item.name}
+                  </ScrollLink>
               ))}
-              
             </Hidden>
             <Hidden mdUp>
               <IconButton onClick={() => setOpen(true)}>
@@ -115,14 +121,19 @@ export default function Navbar() {
               <Divider />
             {navLinks.map((item) => (
               <ListItem key={item.name} disableGutters>
-                <Link 
-                className={styles.buttonlink}
-                variant="button"
-                underline="none"
-                href={item.href}
-                onClick={() => setOpen(false)}
-                component={Button}
-                >{item.name}</Link>
+                
+                <ScrollLink
+                 key={item.name}
+                 className={styles.buttonlink}
+                 to={item.href}
+                 spy={true}
+                 smooth={true}
+                 duration={300}
+                 onClick={() => setOpen(false)}
+                >
+                  {item.name}
+                </ScrollLink>
+                
               </ListItem>
             ))}
             
