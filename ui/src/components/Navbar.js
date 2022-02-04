@@ -30,7 +30,18 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(1),
     fontSize: '0.75rem',
     '&:hover': {
-      color: '#5e615f'
+      color: '#5e615f',
+    }
+  },
+  buttonlink: {
+    color: '#ffffff',
+    padding: theme.spacing(1.5),
+    fontSize: '0.75rem',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'left',
+    '&:hover': {
+      backgroundColor: theme.palette.background.paper
     }
   },
   logo: {
@@ -94,7 +105,6 @@ export default function Navbar() {
           open={open}
           onOpen={() => setOpen(true)}
           onClose={() => setOpen(false)}
-
         >
           <List>
           
@@ -106,13 +116,14 @@ export default function Navbar() {
               <Button className={styles.easteregg} onClick={() => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}>Free Luck 🍀</Button>
               <Divider />
             {navLinks.map((item) => (
-              <ListItem key={item.name}>
+              <ListItem key={item.name} disableGutters>
                 <Link 
-                className={styles.link}
+                className={styles.buttonlink}
                 variant="button"
                 underline="none"
                 href={item.href}
                 onClick={() => setOpen(false)}
+                component={Button}
                 >{item.name}</Link>
               </ListItem>
             ))}
