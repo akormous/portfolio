@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/styles"
 import { Hidden } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { SwipeableDrawer } from "@material-ui/core";
+import SocialLinks from "./SocialLinks";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -106,14 +107,11 @@ export default function Navbar() {
           onOpen={() => setOpen(true)}
           onClose={() => setOpen(false)}
         >
+          <Typography align="center" variant="caption">
+                {"Hello visitor, Let's connect! 😄"}
+          </Typography>
           <List>
-          
-              <Typography variant="caption">
-                {"Hello visitor,"}<br /> 
-                {"Click here for good luck! 😉"}
-              </Typography>
-              <br />
-              <Button className={styles.easteregg} onClick={() => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}>Free Luck 🍀</Button>
+              <SocialLinks fontSize="small" />
               <Divider />
             {navLinks.map((item) => (
               <ListItem key={item.name} disableGutters>

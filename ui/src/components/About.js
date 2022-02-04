@@ -49,7 +49,7 @@ export default function About() {
                     I'm a Software Developer at <Link color="inherit" to="https://amadeus.com/en">{"Amadeus IT Group"}</Link> in Bengaluru, IN.<br />
                     I enjoy solving problems.
                     </Typography>
-                    <SocialLinks />
+                    <SocialLinks fontSize="medium"/>
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <TechnicalSkills />

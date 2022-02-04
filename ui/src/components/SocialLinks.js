@@ -15,31 +15,31 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function SocialLinks() {
+export default function SocialLinks(props) {
     const styles = useStyles();
     return (
         <>
         <IconButton className={styles.button} onClick={() => window.open('https://linkedin.com/in/akormous')} >
-            <LinkedInIcon fontSize="medium" />
+            <LinkedInIcon fontSize={props.fontSize} />
         </IconButton>
 
         <IconButton className={styles.button} onClick={() => window.open('https://github.com/akormous')} >
-            <GitHubIcon fontSize="medium" />
+            <GitHubIcon fontSize={props.fontSize} />
         </IconButton>
 
         <IconButton className={styles.button} onClick={() => window.open('https://twitter.com/akormous')} >
-            <TwitterIcon fontSize="medium" />
+            <TwitterIcon fontSize={props.fontSize} />
         </IconButton>
 
         <IconButton className={styles.button} onClick={() => window.open('https://instagram.com/akormous')} >
-            <InstagramIcon fontSize="medium" />
+            <InstagramIcon fontSize={props.fontSize} />
         </IconButton>
         
         <IconButton className={styles.button} onClick={() => window.open('https://www.youtube.com/channel/UCvXahJHpat0GJRtGQypOq-A')} >
-            <YouTubeIcon fontSize="medium" />
+            <YouTubeIcon fontSize={props.fontSize} />
         </IconButton>
         <IconButton className={styles.button} onClick={() => window.open('mailto:iamakshatchauhan@gmail.com')} >
-            <EmailIcon fontSize="medium" />
+            <EmailIcon fontSize={props.fontSize} />
         </IconButton>
         </>
     );
