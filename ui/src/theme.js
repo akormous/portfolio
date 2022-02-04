@@ -1,22 +1,13 @@
 import { createTheme, responsiveFontSizes } from '@material-ui/core'
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
-const breakpoints = createBreakpoints({});
 const h1 = {
-  fontWeight: 700,
-  [breakpoints.up("xs")]: {
-    fontSize: "3rem"
-  },
-  [breakpoints.up('md')]: {
-    fontSize: '6rem',
-  },
+  fontWeight: 800,
+  fontSize: '5rem',
 }
 
 const h2 = {
   fontWeight: 600,
-  [breakpoints.up("xs")]: {
-    fontSize: "2rem"
-  },
+  fontSize: '3rem'
 }
 
 let theme = createTheme({

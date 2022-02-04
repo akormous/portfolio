@@ -1,8 +1,9 @@
-import { Box, Chip, Hidden, Dialog, makeStyles, DialogContent } from "@material-ui/core";
+import { Box, Chip, Hidden, Dialog, makeStyles, DialogContent, DialogTitle } from "@material-ui/core";
 import { ToggleButtonGroup } from "@material-ui/lab";
 import React from "react";
 import intros from "./data/intros.json"
 import TranslateIcon from '@material-ui/icons/Translate';
+import { Slide } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -13,18 +14,23 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     dialogroot: {
-        //backgroundColor: 'rgba(0,0,0,0.25)',
+        //backgroundColor: 'rgba(0,0,0,0.25)',     
     },
     dialogcontent: {
         display: 'flex',
         flexDirection: 'column',
-        padding: theme.spacing(3),
+        padding: theme.spacing(1),
         backgroundColor: 'rgba(0,0,0,0.25)',
         '& > *': {
             margin: theme.spacing(0.5),
         },
+
     }
-}))
+}));
+
+const SlideTransition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
 
 export default function LanguageSelector(props) {
     const styles = useStyles();
@@ -63,8 +69,16 @@ export default function LanguageSelector(props) {
                 <Dialog 
                 open={open}
                 onClose={handleClose}
+                TransitionComponent={SlideTransition}
                 className={styles.dialogroot}
+                PaperProps={{
+                    style: {
+                        backgroundColor: 'rgba(0,0,0,0.55)',
+                        backdropFilter: 'blur(6px)',
+                    }
+                }}
                 >
+                    <DialogTitle>{"Translate to"}</DialogTitle>
                     <DialogContent
                     className={styles.dialogcontent}
                     >

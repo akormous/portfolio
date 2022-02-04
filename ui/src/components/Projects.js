@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
+        backgroundColor: theme.palette.primary.light
     },
     techStack: {
         height: '100%',
