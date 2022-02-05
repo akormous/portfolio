@@ -1,3 +1,4 @@
+import {someColors} from "../theme.js";
 /*
 COMMON UTILITY FUNCTIONS
 */
@@ -21,4 +22,10 @@ export const randomString = (len) => {
 export const randomCharacter = () => {
     var characters = "abcdefghijklmnopqrstuvwxyz1234567890";
     return characters.charAt(Math.floor(Math.random() * characters.length))
+}
+
+/* getRandomColor(): returns a random color from the the someColors array defined in theme.js */
+export function getRandomColor() {
+    const random = Math.floor(Math.random() * someColors.length);
+    return someColors[random];
 }

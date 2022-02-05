@@ -2,10 +2,10 @@ import { Card, CardActionArea, CardContent, CardMedia, Chip, makeStyles } from "
 import { Paper, Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import Heading from "./Heading";
-/* Preview images */
-import FaceMaskDetection from "../images/facemaskdetection.png";
-import Sharify from "../images/sharify.png";
-import theme from "../theme";
+//import { getRandomColor } from "../utility/common";
+/* import data from projects.json */
+import projects from './data/projects.json';
+import { getRandomColor } from "../utility/common";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -62,82 +62,35 @@ export default function Projects() {
             <Container maxWidth='lg'>
             <Grid container spacing={4}>
                 
-                <Grid item xs={12} md={4}>
+                {projects.map((project) => (
+                    <Grid item xs={12} md={4}>
                     <Card className={styles.projectCard}>
                         <CardActionArea
-                        onClick={() => window.open('https://github.com/akormous/portfolio')}
+                        onClick={() => window.open(project.githubLink)}
                         >
                             <CardMedia
                             component="img"
                             height="140"
-                            image="/preview.png"
-                            alt="projectname"
+                            image={project.imagePath}
+                            alt={project.title}
                             />
                             <CardContent>
-                                <Typography variant="h5">Portfolio Website</Typography>
+                                <Typography variant="h5">{project.title}</Typography>
                                 <Typography variant="caption">
-                                A single page application showcasing my professional experience, projects, skills and interests. 
+                                    {project.description}
                                 </Typography>
                             </CardContent>
                             
                         </CardActionArea>
                         <CardContent>
-                            <Chip className={styles.technologyStackChip} label="GatsbyJS" style={{background: theme.palette.gatsby}} />
-                            <Chip className={styles.technologyStackChip} label="Material Design" style={{background: theme.palette.css}} />
+                            {project.technologies.map((tech) => (
+                                
+                                <Chip className={styles.technologyStackChip} label={tech} style={{background: getRandomColor()}} />
+                            ))}
                         </CardContent>
                     </Card>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                    <Card className={styles.projectCard}>
-                        <CardActionArea
-                        onClick={() => window.open('https://github.com/akormous/Real-Time-Mask-Detection-and-Analysis-System')}
-                        >
-                            <CardMedia
-                            component="img"
-                            height="140"
-                            image={FaceMaskDetection}
-                            alt="projectname"
-                            />
-                            <CardContent>
-                                <Typography variant="h5">Face Mask Detection and Analysis</Typography>
-                                <Typography variant="caption">
-                                A web application providing automatic surveillance that checks for face masks worn by people. Helps in enforcing COVID-19 guidelines at a crowded place.
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardContent>
-                            <Chip className={styles.technologyStackChip} label="Python-Django" style={{background: theme.palette.python}} />
-                            <Chip className={styles.technologyStackChip} label="Tensorflow" style={{background: theme.palette.tensorflow}} />
-                            <Chip className={styles.technologyStackChip} label="ReactJS" style={{background: theme.palette.react}} />
-                        </CardContent>
-                    </Card>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                    <Card className={styles.projectCard}>
-                        <CardActionArea
-                        onClick={() => window.open('https://github.com/akormous/sharify')}
-                        >
-                            <CardMedia
-                            component="img"
-                            height="140"
-                            image={Sharify}
-                            alt="projectname"
-                            />
-                            <CardContent>
-                                <Typography variant="h5">Spotify Songs Sharing App</Typography>
-                                <Typography variant="caption">
-                                A song sharing service that enables sharing of playlists from Spotify to main feed in the form of posts.
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardContent>
-                            <Chip className={styles.technologyStackChip} label="Python-Django" style={{background: theme.palette.python}} />
-                            <Chip className={styles.technologyStackChip} label="MySQL" style={{background: theme.palette.react}} />
-                            <Chip className={styles.technologyStackChip} label="HTML5" style={{background: theme.palette.html}} />
-                            <Chip className={styles.technologyStackChip} label="CSS" style={{background: theme.palette.css}} />
-                        </CardContent>
-                    </Card>
-                </Grid>
+                    </Grid>
+                ))}
             </Grid>
             </Container>
         </Paper>

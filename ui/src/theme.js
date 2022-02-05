@@ -1,5 +1,7 @@
 import { createTheme, responsiveFontSizes } from '@material-ui/core'
 
+export const someColors = ['#663399', '#306998', '#4c768d', '#de7e00', '#e44d26', '#214ce5', '#563D7C',];
+
 const h1 = {
   fontWeight: 800,
   fontSize: '5rem',
@@ -33,14 +35,6 @@ let theme = createTheme({
           paper: '#f5f5f5',
           text: '#000000'
         },
-        gatsby: '#663399',
-        python: '#306998',
-        react: '#4c768d',
-        tensorflow: '#de7e00',
-        html: '#e44d26',
-        css: '#214ce5',
-        bootstrap: '#563D7C',
-        
     },
     typography: {
       fontFamily: [
