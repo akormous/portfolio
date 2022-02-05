@@ -1,0 +1,34 @@
+[
+    {
+        "company": "Amadeus IT Group",
+        "designation": "Software Development Engineer",
+        "tenure": "Aug 2021 - Present",
+        "description": [
+            "Working as a C++ Developer in PAYMENTS team."
+        ],
+        "iconKey": "flight"
+    },
+    {
+        "company": "Amadeus IT Group",
+        "designation": "SDE Intern",
+        "tenure": "Jan 2021 - May 2021",
+        "description": [
+            "Built a platform that automates Amadeus Payment Test Scenarios.",
+            "Reduced analysis time and error investigation time by 50%",
+            "Developed using React, Redux, and Express.js"
+        ],
+        "iconKey": "flight"
+    },
+    {
+        "company": "CL Educate Ltd.",
+        "designation": "Data Science Intern",
+        "tenure": "May 2020 - Jun 2020",
+        "description": [
+            "Applied machine learning algorithms on stock market data to gain insights such as Beta value of a stock, future stock prices, Efficient Frontier, and correlation between stocks.",
+            "Identified trade calls using Bollinger Bands and Simple Moving Averages",
+            "Developed using Python, Numpy, Pandas, Matplotlib, Sci-kit learn"
+        ],
+        "iconKey": "data",
+        "isLastObject": "true"
+    }
+]
