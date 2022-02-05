@@ -1,4 +1,9 @@
+import React from "react";
 import {someColors} from "../theme.js";
+/* import icons */
+import FlightSharpIcon from '@material-ui/icons/FlightSharp';
+import BarChartSharpIcon from '@material-ui/icons/BarChartSharp';
+
 /*
 COMMON UTILITY FUNCTIONS
 */
@@ -28,4 +33,13 @@ export const randomCharacter = () => {
 export function getRandomColor() {
     const random = Math.floor(Math.random() * someColors.length);
     return someColors[random];
+}
+
+/*  */
+export function getIconFromKey(key) {
+    switch(key) {
+        case "flight": return <FlightSharpIcon />;
+        case "data": return <BarChartSharpIcon />;
+        default : return <BarChartSharpIcon />;
+    }
 }

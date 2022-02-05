@@ -48154,11 +48154,13 @@ const wrapRootElement = ({
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "someColors": () => (/* binding */ someColors),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/styles/createTheme.js");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/styles/responsiveFontSizes.js");
 
+const someColors = ['#663399', '#306998', '#4c768d', '#de7e00', '#e44d26', '#214ce5', '#563D7C'];
 const h1 = {
   fontWeight: 800,
   fontSize: '5rem'
@@ -48189,14 +48191,7 @@ let theme = (0,_material_ui_core__WEBPACK_IMPORTED_MODULE_0__["default"])({
       default: '#f5f5f5',
       paper: '#f5f5f5',
       text: '#000000'
-    },
-    gatsby: '#663399',
-    python: '#306998',
-    react: '#4c768d',
-    tensorflow: '#de7e00',
-    html: '#e44d26',
-    css: '#214ce5',
-    bootstrap: '#563D7C'
+    }
   },
   typography: {
     fontFamily: ['-apple-system', 'BlinkMacSystemFont', '"Montserrat"', 'Roboto', '"Montserrat"', 'Montserrat', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"'].join(','),
