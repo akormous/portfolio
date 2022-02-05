@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Portfolio Website",
+        "description": "A single page application showcasing my professional experience, projects, skills and interests.",
+        "technologies": ["GatsbyJS", "Material Design"],
+        "imagePath": "/preview.png",
+        "githubLink": "https://github.com/akormous/portfolio"
+    },
+    {
+        "title": "Facemask Detection Dashboard",
+        "description": "A web application providing automatic surveillance that checks for face masks worn by people. Helps in enforcing COVID-19 guidelines at a crowded place.",
+        "technologies": ["Python-Django", "Tensorflow", "ReactJS"],
+        "imagePath": "/facemaskdetection.png",
+        "githubLink": "https://github.com/akormous/Real-Time-Mask-Detection-and-Analysis-System"
+    },
+    {
+        "title": "Spotify songs sharing app",
+        "description": "A song sharing service that enables sharing of playlists from Spotify to main feed in the form of posts.",
+        "technologies": ["Python-Django", "MySQL", "HTML5", "CSS"],
+        "imagePath": "/sharify.png",
+        "githubLink": "https://github.com/akormous/sharify"
+    }
+]
