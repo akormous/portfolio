@@ -41,7 +41,11 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        backgroundColor: theme.palette.primary.light
+        backgroundColor: theme.palette.primary.main,
+        transition: 'all 0.2s',
+        '&:hover': {
+            backgroundColor: theme.palette.primary.light
+        }
     },
     techStack: {
         height: '100%',
@@ -51,6 +55,8 @@ const useStyles = makeStyles((theme) => ({
     },
     technologyStackChip: {
         marginRight: '4px',
+        background: getRandomColor(),
+        fontSize: '0.75rem'
     }
 }));
 
@@ -64,28 +70,26 @@ export default function Projects() {
                 
                 {projects.map((project) => (
                     <Grid item xs={12} md={4}>
-                    <Card className={styles.projectCard}>
-                        <CardActionArea
-                        onClick={() => window.open(project.githubLink)}
-                        >
-                            <CardMedia
-                            component="img"
-                            height="140"
-                            image={project.imagePath}
-                            alt={project.title}
-                            />
-                            <CardContent>
-                                <Typography variant="h5">{project.title}</Typography>
-                                <Typography variant="caption">
-                                    {project.description}
-                                </Typography>
-                            </CardContent>
-                            
-                        </CardActionArea>
+                    <Card
+                    variant="outlined"
+                    className={styles.projectCard}
+                    onClick={() => window.open(project.githubLink)}
+                    >    
+                        <CardMedia
+                        component="img"
+                        height="140"
+                        image={project.imagePath}
+                        alt={project.title}
+                        />
+                        <CardContent>
+                            <Typography variant="h6">{project.title}</Typography>
+                            <Typography variant="caption">
+                                {project.description}
+                            </Typography>
+                        </CardContent>
                         <CardContent>
                             {project.technologies.map((tech) => (
-                                
-                                <Chip className={styles.technologyStackChip} label={tech} style={{background: getRandomColor()}} />
+                                <Chip size="small" className={styles.technologyStackChip} label={tech} style={{background: getRandomColor()}} />
                             ))}
                         </CardContent>
                     </Card>
