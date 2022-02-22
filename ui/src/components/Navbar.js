@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '0.75rem',
     cursor: 'default',
     '&:hover': {
-      color: '#5e615f',
+      color: '#ffb400',
     },
   },
   buttonlink: {

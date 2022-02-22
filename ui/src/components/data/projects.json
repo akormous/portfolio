@@ -8,7 +8,7 @@
     },
     {
         "title": "Facemask Detection Dashboard",
-        "description": "A web application providing automatic surveillance that checks for face masks worn by people. Helps in enforcing COVID-19 guidelines at a crowded place.",
+        "description": "A web application providing automatic surveillance that checks for face masks worn by people.",
         "technologies": ["Python-Django", "Tensorflow", "ReactJS"],
         "imagePath": "/facemaskdetection.png",
         "githubLink": "https://github.com/akormous/Real-Time-Mask-Detection-and-Analysis-System"

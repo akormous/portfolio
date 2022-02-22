@@ -120,11 +120,11 @@ export default function Contact() {
 
     return(
         <Paper className={styles.root} id="contact">
-            <Heading content="Contact me" />
+            <Heading content="Contact" />
             <Typography align="center" variant="body1" className={styles.contactIntro}>
-                    For business inquiries, get in touch <br />
+                    For business inquiries, or want to say hi <br />
                     Just drop a message below ! 😃<br />
-                    or drop an email at <Link href="mailto:iamakshatchauhan@gmail.com">iamakshatchauhan@gmail.com</Link>
+                    Alternatively, email at <br /> <Link href="mailto:iamakshatchauhan@gmail.com">iamakshatchauhan@gmail.com</Link>
             </Typography>
             <Container align="center" maxWidth='lg'>
                 <Container maxWidth="xs" className={styles.form}>
