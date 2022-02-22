@@ -1,4 +1,4 @@
-import { Card, CardActionArea, CardContent, CardMedia, Chip, makeStyles } from "@material-ui/core";
+import { Card, CardContent, CardMedia, Chip, makeStyles } from "@material-ui/core";
 import { Paper, Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import Heading from "./Heading";
