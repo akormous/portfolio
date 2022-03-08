@@ -8,10 +8,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         display: 'flex',
         flexDirection: 'column',
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
         textTransform: 'uppercase',
-        letterSpacing: '0.25rem'
+        letterSpacing: '0.25rem',
+        padding: 0
     },
 }));
 

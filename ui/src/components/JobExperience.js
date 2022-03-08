@@ -12,13 +12,18 @@ const useStyles = makeStyles((theme) => ({
         background: theme.palette.lightbackground.default,
         color: theme.palette.lightbackground.text,
         borderRadius: 0,
-        alignItems: 'start',
-        justifyContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'start',
         flexDirection: 'column',
         display: 'flex',
-        paddingBottom: theme.spacing(12),
+        height: "100%",
+        width: "100%",
+        paddingBlock: theme.spacing(14)
     },
-    
+    experienceContainer: {
+        marginBlock: theme.spacing(4),
+        padding: 0
+    },
     content: {
         alignItems: 'start',
         justifyContent: 'center',
@@ -52,11 +57,9 @@ const useStyles = makeStyles((theme) => ({
 export default function JobExperience(props) {
     const styles = useStyles();
     return(
-        <Paper className={styles.root}>
-
-        
-            <Container maxWidth='md'>
-                <Heading content="Experience" />
+        <Paper className={styles.root} id="experience">
+            <Heading content="Experience" />
+            <Container className={styles.experienceContainer} maxWidth='sm'>
                 <Timeline align="left" position="right">
                     {jobexperience.map((job) => (
                         <TimelineItem>

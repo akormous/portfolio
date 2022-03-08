@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         borderRadius: 0,
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'start',
         flexDirection: 'column',
         display: 'flex',
         height: "100%",
@@ -19,10 +19,10 @@ const useStyles = makeStyles((theme) => ({
     },
     skillPanel: {
         width: '100%',
-        padding: theme.spacing(2),
         alignItems: 'start',
         display: 'flex',
         flexDirection: 'column',
+        marginBottom: theme.spacing(4)
     },
     skill: {
         display: 'flex',
@@ -36,7 +36,7 @@ export default function TechnicalSkills() {
 
     const styles = useStyles();
     return(
-        <Container className={styles.root}>
+        <Container className={styles.root} disableGutters>
 
             <Box className={styles.skillPanel}>
                 <Typography variant="body1" className={styles.skillCategory}>Programming Languages</Typography>

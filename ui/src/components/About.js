@@ -14,9 +14,17 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'start',
         flexDirection: 'column',
         display: 'flex',
-        paddingBottom: theme.spacing(12),
         height: "100%",
-        width: "100%"
+        width: "100%",
+        paddingBlock: theme.spacing(14)
+    },
+    aboutContainer: {
+        marginBlock: theme.spacing(4),
+        padding: 0
+    },
+    gridItem: {
+        paddingInline: theme.spacing(4),
+        marginBlock: theme.spacing(4)
     },
     avatarContainer: {
         alignItems: 'center',
@@ -38,10 +46,10 @@ export default function About() {
     return(
         <Paper className={styles.root} id="about">
             <Heading content="About" />
-            <Container maxWidth='lg'>
-            <Grid container spacing={2}>
-                <Grid align='center' item xs={12} md={6}>
-                    <Container>
+            <Container className={styles.aboutContainer} maxWidth='lg'>
+            <Grid align="center" container>
+                <Grid item xs={12} md={6} className={styles.gridItem}>
+                    <Container disableGutters>
                         <img className={styles.avatar} src={DP} alt="Imagine me in the himalayas" />
                     </Container>
                     
@@ -51,7 +59,7 @@ export default function About() {
                     </Typography>
                     <SocialLinks fontSize="medium"/>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6} className={styles.gridItem}>
                     <TechnicalSkills />
                 </Grid>
             </Grid>
