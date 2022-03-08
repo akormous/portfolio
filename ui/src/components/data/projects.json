@@ -19,5 +19,26 @@
         "technologies": ["Python-Django", "MySQL", "HTML5", "CSS"],
         "imagePath": "/sharify.png",
         "githubLink": "https://github.com/akormous/sharify"
+    },
+    {
+        "title": "Software Engineering Resources",
+        "description": "Quick notes of various Software Engineering concepts and best practices.",
+        "technologies": ["Git", "DevOps", "Microservices"],
+        "imagePath": "https://opengraph.githubassets.com/1/akormous/software-engineering-resources/",
+        "githubLink": "https://github.com/akormous/software-engineering-resources/"
+    },
+    {
+        "title": "Super Pro DSA",
+        "description": "Solutions of famous DSA questions ... a lot of questions in here dude.",
+        "technologies": ["Algorithms", "Data Structures"],
+        "imagePath": "https://opengraph.githubassets.com/1/akormous/super-pro-dsa/",
+        "githubLink": "https://github.com/akormous/super-pro-dsa/"
+    },
+    {
+        "title": "Untitled Project",
+        "description": "Hmmm... I am working on this project.",
+        "technologies": ["NextJS"],
+        "imagePath": "https://opengraph.githubassets.com/1/akormous/nextjs-app/",
+        "githubLink": "https://github.com/akormous/nextjs-app"
     }
 ]

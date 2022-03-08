@@ -15,9 +15,12 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'start',
         flexDirection: 'column',
         display: 'flex',
-        paddingBottom: theme.spacing(12),
         height: "100%",
         width: "100%",
+        paddingBlock: theme.spacing(14)
+    },
+    projectsContainer: {
+        marginBlock: theme.spacing(4),
     },
     avatarContainer: {
         alignItems: 'center',
@@ -40,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
+        marginBlock: theme.spacing(2),
         justifyContent: 'space-between',
         backgroundColor: theme.palette.primary.main,
         transition: 'all 0.2s',
@@ -65,7 +69,7 @@ export default function Projects() {
     return(
         <Paper className={styles.root} id="projects">
             <Heading content="Projects" />
-            <Container maxWidth='lg'>
+            <Container className={styles.projectsContainer} maxWidth='lg'>
             <Grid container spacing={4}>
                 
                 {projects.map((project) => (

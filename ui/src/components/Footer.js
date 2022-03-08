@@ -11,10 +11,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'start',
         flexDirection: 'column',
         display: 'flex',
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
         height: "100%",
-        width: "100%"
+        width: "100%",
+        paddingBlock: theme.spacing(14)
     },
     tagline: {
         display: 'flex',

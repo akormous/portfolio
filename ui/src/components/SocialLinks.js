@@ -11,7 +11,10 @@ import EmailIcon from '@material-ui/icons/Email';
 
 const useStyles = makeStyles((theme) => ({
     button: {
-        color: '#ffffff'
+        color: '#ffffff',
+        '&:hover': {
+            color: theme.palette.primary.yellow,
+        }
     }
 }));
 

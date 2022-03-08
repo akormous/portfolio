@@ -15,20 +15,20 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         flexDirection: 'column',
         display: 'flex',
-        paddingBottom: theme.spacing(12),
         height: "100%",
-        width: "100%"
+        width: "100%",
+        paddingBlock: theme.spacing(14)
     },
     contactIntro: {
-        fontWeight: '500'
+        fontWeight: '500',
+        marginBlock: theme.spacing(4)
     },
     form: {
-        marginTop: theme.spacing(4),
         border: '1px',
         borderColor: theme.palette.primary.dark,
     },
     inputField: {
-        marginBottom: theme.spacing(2)
+        marginBlock: theme.spacing(2)
     },
     textField: {
         color: theme.palette.lightbackground.text,
@@ -37,9 +37,12 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.lightbackground.default,
         backgroundColor: theme.palette.primary.main,
         borderRadius: 0,
+        boxShadow: '0 0 0 0',
         '&:hover': {
-            backgroundColor: theme.palette.primary.light,
-        }
+            backgroundColor: theme.palette.primary.main,
+            boxShadow: '0 0 0 0',
+            color: theme.palette.primary.yellow
+        },
     },
     erralert: {
         color: 'white',
