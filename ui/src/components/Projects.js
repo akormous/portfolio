@@ -22,23 +22,6 @@ const useStyles = makeStyles((theme) => ({
     projectsContainer: {
         marginBlock: theme.spacing(4),
     },
-    avatarContainer: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        display: 'flex',
-        flexDirection: 'column'
-    },
-    avatar: {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        marginBottom: '10px',
-        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2),  0 4px 8px 0 rgba(0, 0, 0, 0.2)',
-        transition: 'all 0.2s',
-        '&:hover': {
-            'opacity': "0.9"
-        }
-    },
     projectCard: {
         height: '100%',
         display: 'flex',
@@ -81,9 +64,10 @@ export default function Projects() {
                     >    
                         <CardMedia
                         component="img"
-                        height="140"
+                        height="194"
                         image={project.imagePath}
                         alt={project.title}
+                        style={{objectFit: 'cover'}}
                         />
                         <CardContent>
                             <Typography variant="h6">{project.title}</Typography>
