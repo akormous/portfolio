@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     color: '#ffffff',
-    marginRight: theme.spacing(6),
+    marginLeft: theme.spacing(6),
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
     textTransform: 'uppercase',
