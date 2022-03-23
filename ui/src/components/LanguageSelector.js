@@ -25,6 +25,12 @@ const useStyles = makeStyles((theme) => ({
             margin: theme.spacing(0.5),
         },
 
+    },
+    languageChip: {
+        transition: 'all 0.1s',
+        '&:hover': {
+            color: theme.palette.primary.yellow
+        }
     }
 }));
 
@@ -51,6 +57,7 @@ export default function LanguageSelector(props) {
             <ToggleButtonGroup>
                 {languages.map((lang) => (
                 <Chip
+                className={styles.languageChip}
                 size="small"
                 variant="outlined"
                 label={intros[lang].label}
@@ -84,6 +91,7 @@ export default function LanguageSelector(props) {
                     >
                     {languages.map((lang) => (
                     <Chip
+                    className={styles.languageChip}
                     size="medium"
                     variant="outlined"
                     label={intros[lang].label}
