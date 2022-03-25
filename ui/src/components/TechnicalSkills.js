@@ -43,13 +43,13 @@ export default function TechnicalSkills() {
                 <SkillRating skill="C++" rating={6} />
                 <SkillRating skill="Python" rating={6} />
                 <SkillRating skill="JavaScript" rating={6} />
-                <SkillRating skill="Java" rating={5} />
+                <SkillRating skill="Go" rating={4} />
                 
             </Box>
         
             <Box className={styles.skillPanel}>
                 <Typography variant="body1" className={styles.skillCategory}>Backend Skills</Typography>
-                <SkillRating skill="Express.js" rating={6} />
+                <SkillRating skill="Node.js" rating={6} />
                 <SkillRating skill="OOP Design" rating={5} />
                 <SkillRating skill="MySQL" rating={5} />
                 <SkillRating skill="Python-Django" rating={4} />
