@@ -43,7 +43,7 @@ export default function Hero() {
     const [shouldShow, setShouldShow] = useState(false);
    
 
-    // resolves the name aka Glitch effect
+    /** resolves the name aka Glitch effect
     const resolveName = async (f_name, l_name) => {
         for(var i = 0; i < Math.max(f_name.length, l_name.length); ++i) {
             for(var j = 0; j < 10; j++) {
@@ -55,28 +55,29 @@ export default function Hero() {
         setFName(f_name);
         setLName(l_name);
     }
-    
+    */
+
     // set intro - sets tagline and name
     const setIntro = useCallback ( (lang) => {
         setTagline(intros[lang].tagline);
-        resolveName(intros[lang].f_name, intros[lang].l_name)
+        setFName(intros[lang].f_name);
+        setLName(intros[lang].l_name);
     }, []);
 
-    // cycles through multiple languages
-/*
-    const cycleLanguages = async () => {
-        for(var lang in intros) {
-            if(!intros.hasOwnProperty(lang))
-                continue;
+    /** cycles through multiple languages
+        const cycleLanguages = async () => {
+            for(var lang in intros) {
+                if(!intros.hasOwnProperty(lang))
+                    continue;
 
-            var intro = intros[lang];
-            setIntro(lang);
+                var intro = intros[lang];
+                setIntro(lang);
 
-            await sleep(3000);
+                await sleep(3000);
+            }
+            setIntro("english");
         }
-        setIntro("english");
-    }
-*/
+    */
     // when the component finishes rendering
     useEffect(() => {
         setShouldShow(true);
