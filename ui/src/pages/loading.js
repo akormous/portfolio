@@ -1,7 +1,6 @@
 import { CircularProgress, Container, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import React from "react";
-import { getRandomQuote } from "../utility/common";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -27,14 +26,14 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export default function LoadingPage() {
+export default function LoadingPage(props) {
     const styles = useStyles();
-    const quote = getRandomQuote();
+
     return (
         <Paper className={styles.root}>
             <Container className={styles.container} maxWidth="lg">
-                <Typography align='center' variant="body1">{quote.quote}</Typography>
-                <Typography align='center' variant="body1" style={{ fontStyle: 'italic' }}>- {quote.author}</Typography>
+                <Typography align='center' variant="body1">{props.quote}</Typography>
+                <Typography align='center' variant="body1" style={{ fontStyle: 'italic' }}>{props.author}</Typography>
                 <CircularProgress className={styles.progress} />
             </Container>
         </Paper>
