@@ -8,13 +8,17 @@ import Footer from "../components/Footer"
 
 import LoadingPage from "./loading"
 import JobExperience from "../components/JobExperience"
+import { sleep } from "../utility/common"
 
 // markup
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    setLoading(false);
+    const showQuote = async() => {
+      await sleep(2500);
+      setLoading(false);
+    }
+    showQuote();
   }, []); 
 
   return loading ? (

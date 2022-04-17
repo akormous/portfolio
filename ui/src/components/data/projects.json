@@ -28,17 +28,17 @@
         "githubLink": "https://github.com/akormous/software-engineering-resources/"
     },
     {
-        "title": "Super Pro DSA",
-        "description": "Solutions of famous DSA questions ... a lot of questions in here dude.",
-        "technologies": ["Algorithms", "Data Structures"],
+        "title": "Data Structures and Algorithms",
+        "description": "My C++ solutions to problems based on various Data Structures and Algorithms.",
+        "technologies": ["Data Structures", "Algorithms", "C++"],
         "imagePath": "https://opengraph.githubassets.com/1/akormous/super-pro-dsa/",
         "githubLink": "https://github.com/akormous/super-pro-dsa/"
     },
     {
-        "title": "Untitled Project",
-        "description": "Hmmm... I am working on this project.",
-        "technologies": ["NextJS"],
-        "imagePath": "https://opengraph.githubassets.com/1/akormous/nextjs-app/",
-        "githubLink": "https://github.com/akormous/nextjs-app"
+        "title": "Design Patterns",
+        "description": "A collection of C++ projects implementing various object-oriented design patterns.",
+        "technologies": ["C++", "Observer", "Factory", "Decorator"],
+        "imagePath": "https://opengraph.githubassets.com/1/akormous/design-patterns/",
+        "githubLink": "https://github.com/akormous/design-patterns"
     }
 ]

@@ -1,0 +1,74 @@
+{
+    "Programming Languages": [
+        {
+            "name": "C++",
+            "rating": 6
+        },
+        {
+            "name": "Python",
+            "rating": 5
+        },
+        {
+            "name": "JavaScript",
+            "rating": 6
+        },
+        {
+            "name": "Go",
+            "rating": 4
+        }
+    ],
+    "Backend": [
+        {
+            "name": "OOP Design",
+            "rating": 6
+        },
+        {
+            "name": "Node.js",
+            "rating": 6
+        },
+        {
+            "name": "Python-Django",
+            "rating": 5
+        },
+        {
+            "name": "SQL",
+            "rating": 5
+        }
+    ],
+    "Frontend": [
+        {
+            "name": "React.js",
+            "rating": 6
+        },
+        {
+            "name": "Responsive Design",
+            "rating": 7
+        },
+        {
+            "name": "Bootstrap",
+            "rating": 6
+        },
+        {
+            "name": "HTML + CSS",
+            "rating": 6
+        }
+    ],
+    "Dev Tools and Other Skills": [
+        {
+            "name": "Git",
+            "rating": 6
+        },
+        {
+            "name": "Bash",
+            "rating": 5
+        },
+        {
+            "name": "Pandas",
+            "rating": 6
+        },
+        {
+            "name": "PlantUML",
+            "rating": 5
+        }
+    ]
+}

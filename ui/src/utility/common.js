@@ -1,5 +1,6 @@
 import React from "react";
 import {someColors} from "../theme.js";
+import quotes from "../components/data/quotes.json";
 /* import icons */
 import FlightSharpIcon from '@material-ui/icons/FlightSharp';
 import BarChartSharpIcon from '@material-ui/icons/BarChartSharp';
@@ -42,4 +43,13 @@ export function getIconFromKey(key) {
         case "data": return <BarChartSharpIcon />;
         default : return <BarChartSharpIcon />;
     }
+}
+
+/**
+ * getRandomQuote():
+ * @return 1 random quote object from ../components/data/quotes.json
+ */
+export function getRandomQuote() {
+    const random = Math.floor(Math.random() * quotes.length);
+    return quotes[random];
 }
