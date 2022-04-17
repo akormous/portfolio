@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react"
 import { makeStyles } from "@material-ui/styles"
 import { Box, Paper, Typography, Fade } from "@material-ui/core"
-import {sleep, randomCharacter} from '../utility/common'
+//import {sleep, randomCharacter} from '../utility/common'
 import Video from "./Video"
 
 import intros from "./data/intros.json"

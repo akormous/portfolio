@@ -5,7 +5,6 @@ import Heading from "./Heading";
 //import { getRandomColor } from "../utility/common";
 /* import data from projects.json */
 import projects from './data/projects.json';
-import { getRandomColor } from "../utility/common";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,12 +25,14 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        marginBlock: theme.spacing(2),
+        marginBlock: theme.spacing(0.5),
         justifyContent: 'space-between',
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.background.default,
         transition: 'all 0.2s',
+        cursor: 'default',
+        borderRadius: 0,
         '&:hover': {
-            backgroundColor: theme.palette.primary.light
+            backgroundColor: theme.palette.primary.main
         }
     },
     techStack: {
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     },
     technologyStackChip: {
         marginRight: '4px',
-        background: getRandomColor(),
+        background: theme.palette.primary.main,
         fontSize: '0.75rem'
     }
 }));
@@ -77,7 +78,7 @@ export default function Projects() {
                         </CardContent>
                         <CardContent>
                             {project.technologies.map((tech) => (
-                                <Chip size="small" className={styles.technologyStackChip} label={tech} style={{background: getRandomColor()}} />
+                                <Chip variant="outlined" size="small" className={styles.technologyStackChip} label={tech} />
                             ))}
                         </CardContent>
                     </Card>

@@ -64,7 +64,6 @@ export default function Footer() {
     const year = new Date().getFullYear();
     return (
         <Paper className={styles.root}>            
-            <Typography align="center" className={styles.builtWith} variant="h2">Built with GatsbyJS</Typography>
             <Container className={styles.footerContainer} maxWidth='lg'>
                 <Grid container>
                     <Grid item className={styles.logoItem} xs={12} md={6}>
