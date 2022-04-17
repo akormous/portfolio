@@ -8,21 +8,26 @@ import Footer from "../components/Footer"
 
 import LoadingPage from "./loading"
 import JobExperience from "../components/JobExperience"
-import { sleep } from "../utility/common"
+import { getRandomQuote } from "../utility/common"
 
 // markup
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
+  
+  // set quote on loading screen
+  const [quote, setQuote] = useState("");
+  const [author, setAuthor] = useState("");
+  
   useEffect(() => {
-    const showQuote = async() => {
-      await sleep(2500);
-      setLoading(false);
-    }
-    showQuote();
+    const randomQuote = getRandomQuote();
+    setQuote(randomQuote.quote);
+    setAuthor(randomQuote.author);
+    setTimeout(() => setLoading(false), 2500)
+
   }, []); 
 
   return loading ? (
-    <LoadingPage />
+    <LoadingPage quote={quote} author={author} />
   ) : 
   (
    <>
