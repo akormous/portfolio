@@ -4,5 +4,4 @@ node_modules/
 .env.development
 .env.production
 
-public/render-page.js
-public/render-page.js.map
+public/
