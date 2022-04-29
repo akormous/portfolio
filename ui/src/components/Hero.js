@@ -86,7 +86,7 @@ export default function Hero() {
     return(
         <>
         <Fade in={shouldShow}>
-        <Paper className={styles.root}>
+        <Paper className={styles.root} id="hero">
         <Video />
             <Box className={styles.intro}>
                 <Typography align='center' variant='body1'>{tagline}</Typography>
