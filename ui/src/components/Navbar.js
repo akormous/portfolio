@@ -52,7 +52,12 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     fontWeight: 500,
     marginRight: 'auto',
-    padding: theme.spacing(2)
+    color: '#ffffff',
+    cursor: 'default',
+    padding: theme.spacing(2),
+    '&:hover': {
+      color: theme.palette.primary.yellow,
+    },
   },
   drawer: {
     padding: theme.spacing(2),
@@ -84,7 +89,18 @@ export default function Navbar() {
       <AppBar className={styles.root} position='fixed'>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <Typography className={styles.logo} variant="caption">AKSHAT CHAUHAN</Typography>
+            <ScrollLink  
+             className={styles.logo}
+             key="logo"
+             to="hero"
+             spy={true}
+             smooth={true}
+             duration={200}
+            >
+              <Typography variant="caption">
+                AKSHAT CHAUHAN
+              </Typography>
+            </ScrollLink>
             <Hidden smDown>
               {navLinks.map((item) => (
                   <ScrollLink

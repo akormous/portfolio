@@ -30,9 +30,10 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.default,
         transition: 'all 0.2s',
         cursor: 'default',
-        borderRadius: 0,
+        borderColor: theme.palette.primary.light,
+        borderRadius: '6px',
         '&:hover': {
-            backgroundColor: theme.palette.primary.main
+            backgroundColor: theme.palette.primary.light,
         }
     },
     techStack: {
