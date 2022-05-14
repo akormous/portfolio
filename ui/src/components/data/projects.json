@@ -31,8 +31,8 @@
         "title": "Data Structures and Algorithms",
         "description": "My C++ solutions to problems based on various Data Structures and Algorithms.",
         "technologies": ["Data Structures", "Algorithms", "C++"],
-        "imagePath": "https://opengraph.githubassets.com/1/akormous/super-pro-dsa/",
-        "githubLink": "https://github.com/akormous/super-pro-dsa/"
+        "imagePath": "https://opengraph.githubassets.com/1/akormous/dsa/",
+        "githubLink": "https://github.com/akormous/dsa/"
     },
     {
         "title": "Design Patterns",
