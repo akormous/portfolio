@@ -36,6 +36,20 @@
     "react-scroll": "^1.8.4"
   },
   "devDependencies": {
-    "gatsby-plugin-material-ui": "^3.0.1"
+    "gatsby-plugin-material-ui": "^3.0.1",
+    "async": ">=2.6.4",
+    "minimist": ">=1.2.6",
+    "moment": ">=2.29.2",
+    "follow-redirects": ">=1.14.8",
+    "simple-get": ">=4.0.1",
+    "node-fetch": ">=2.6.7",
+    "ws": ">=7.4.6",
+    "browserslist": ">=4.16.5",
+    "engine.io": ">=4.1.2",
+    "object-path": ">=0.11.8",
+    "immer": ">=9.0.6",
+    "trim": ">=0.0.3",
+    "cross-fetch": ">=3.1.5",
+    "ansi-html": ">=0.0.8"
   }
 }
