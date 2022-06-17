@@ -21,6 +21,13 @@
         "githubLink": "https://github.com/akormous/sharify"
     },
     {
+        "title": "Design Patterns",
+        "description": "A collection of C++ projects implementing various object-oriented design patterns.",
+        "technologies": ["C++", "Observer", "Factory", "Decorator"],
+        "imagePath": "https://opengraph.githubassets.com/1/akormous/design-patterns/",
+        "githubLink": "https://github.com/akormous/design-patterns"
+    },
+    {
         "title": "Software Engineering Resources",
         "description": "Quick notes of various Software Engineering concepts and best practices.",
         "technologies": ["Git", "DevOps", "Microservices"],
@@ -33,12 +40,5 @@
         "technologies": ["Data Structures", "Algorithms", "C++"],
         "imagePath": "https://opengraph.githubassets.com/1/akormous/dsa/",
         "githubLink": "https://github.com/akormous/dsa/"
-    },
-    {
-        "title": "Design Patterns",
-        "description": "A collection of C++ projects implementing various object-oriented design patterns.",
-        "technologies": ["C++", "Observer", "Factory", "Decorator"],
-        "imagePath": "https://opengraph.githubassets.com/1/akormous/design-patterns/",
-        "githubLink": "https://github.com/akormous/design-patterns"
     }
 ]

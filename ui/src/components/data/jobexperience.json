@@ -4,7 +4,7 @@
         "designation": "Software Development Engineer 1",
         "tenure": "Aug 2021 - Present",
         "description": [
-            "C++ Developer in Payments Security and DevOps team"
+            "Securing payment systems, writing code in C++"
         ],
         "iconKey": "flight"
     },
@@ -13,9 +13,7 @@
         "designation": "SDE Intern",
         "tenure": "Jan 2021 - May 2021",
         "description": [
-            "Developed a web platform that automates creation of payment test scenarios",
-            "Reduced analysis time and error investigation time by 40%",
-            "Tools: React, Redux, Node.js and Python"
+            "Built a React, Express application and played pool"
         ],
         "iconKey": "flight"
     },
@@ -24,9 +22,7 @@
         "designation": "Data Science Intern",
         "tenure": "May 2020 - Jun 2020",
         "description": [
-            "Applied machine learning algorithms on stock market data to gain insights such as Beta value of a stock, future stock prices, Efficient Frontier, and correlation between stocks.",
-            "Identified trade calls using Bollinger Bands and Simple Moving Averages",
-            "Developed using Python, Numpy, Pandas, Matplotlib, Sci-kit learn"
+            "Had fun training ML models using Python"
         ],
         "iconKey": "data",
         "isLastObject": "true"

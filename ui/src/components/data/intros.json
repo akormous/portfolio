@@ -2,49 +2,49 @@
     "english": {
         "language": "english",
         "label": "English",
-        "tagline": "Hi, my name is",
+        "tagline": "Engineer, Programmer",
         "f_name": "AKSHAT",
         "l_name": "CHAUHAN"
     },
     "japanese": {
         "language": "japanese",
         "label": "日本語",
-        "tagline": "こんにちは、私の名前は",
+        "tagline": "エンジニア、プログラマー",
         "f_name": "アクシャット",
         "l_name": "チョウアン"
     },
     "spanish": {
         "language": "spanish",
         "label": "española",
-        "tagline": "Hola, mi nombre es",
+        "tagline": "Ingeniero, programador",
         "f_name": "AKSHAT",
         "l_name": "CHAUHAN"
     },
     "hindi": {
         "language": "hindi",
         "label": "हिन्दी",
-        "tagline": "नमस्ते, मेरा नाम है",
+        "tagline": "अभियंता, प्रोग्रामर",
         "f_name": "अक्षत",
         "l_name": "चौहान"
     },
     "arabic": {
         "language": "arabic",
         "label": "عربى",
-        "tagline": "مرحبا \"أسمي هو",
+        "tagline": "مهندس ، مبرمج",
         "f_name": "اكشوت",
         "l_name": "شوهان"
     },
     "mandarin": {
         "language": "mandarin",
         "label": "普通话",
-        "tagline": "你好，我的名字是",
+        "tagline": "工程师、程序员",
         "f_name": "阿克沙特",
         "l_name": "乔汉"
     },
     "russian": {
         "language": "russian",
         "label": "русский",
-        "tagline": "Привет, меня зовут",
+        "tagline": "Инженер, Программист",
         "f_name": "АКШАТ",
         "l_name": "ЧАУХАН"
     }

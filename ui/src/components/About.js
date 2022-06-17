@@ -1,4 +1,4 @@
-import { Link, makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import { Paper, Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import Heading from "./Heading";
@@ -54,8 +54,7 @@ export default function About() {
                     </Container>
                     
                     <Typography align="center" variant="body1">
-                    I'm a Software Developer at <Link color="inherit" to="https://amadeus.com/en">{"Amadeus IT Group"}</Link> in Bengaluru, IN.<br />
-                    I enjoy solving problems.
+                    This is me in the Himalayas
                     </Typography>
                     <SocialLinks fontSize="medium"/>
                 </Grid>
