@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Akshat Chauhan',
     description:
-      'Hi, I am Akshat :)',
+      'Engineer, Programmer',
     siteUrl: 'https://akormous.netlify.app', // No trailing slash allowed!
     image: '/preview.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@akormous',
