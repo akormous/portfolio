@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { AppBar, Toolbar, IconButton, Typography, List, ListItem, Divider, Container } from "@material-ui/core"
+import { Button, AppBar, Toolbar, IconButton, Typography, List, ListItem, Divider, Container } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
 import { Hidden } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -35,6 +35,16 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       color: theme.palette.primary.yellow,
     },
+  },
+  button: {
+      color: theme.palette.lightbackground.default,
+      backgroundColor: theme.palette.primary.main,
+      fontWeight: '800',
+      borderRadius: 16,
+      marginLeft: theme.spacing(6),
+      '&:hover': {
+          backgroundColor: theme.palette.primary.yellow,
+      },
   },
   buttonlink: {
     color: '#ffffff',
@@ -114,6 +124,12 @@ export default function Navbar() {
                   {item.name}
                   </ScrollLink>
               ))}
+              <Button 
+                className={styles.button}
+                href="mailto:iamakshatchauhan@gmail.com"
+                variant="outlined">
+                  Hire Me
+              </Button>
             </Hidden>
             <Hidden mdUp>
               <IconButton onClick={() => setOpen(true)}>
@@ -152,7 +168,11 @@ export default function Navbar() {
                 
               </ListItem>
             ))}
-            
+            <Button 
+              className={styles.buttonlink}
+              href="mailto:iamakshatchauhan@gmail.com">
+                Hire Me
+            </Button>
           </List>
         </SwipeableDrawer>
       </AppBar>
