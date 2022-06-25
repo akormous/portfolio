@@ -38,12 +38,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
       color: theme.palette.lightbackground.default,
-      backgroundColor: theme.palette.primary.main,
       fontWeight: '800',
       borderRadius: 16,
       marginLeft: theme.spacing(6),
+      'box-shadow': '0px 0px 25px #92FE9D',
       '&:hover': {
-          backgroundColor: theme.palette.primary.yellow,
+          background: 'linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)',
+          color: theme.palette.primary.dark,
       },
   },
   buttonlink: {
