@@ -41,9 +41,9 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: '800',
       borderRadius: 16,
       marginLeft: theme.spacing(6),
-      'box-shadow': '0px 0px 25px #92FE9D',
+      'box-shadow': '0px 0px 25px #FFEF00',
       '&:hover': {
-          background: 'linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)',
+          background: 'linear-gradient(90deg, #CFCC0A 0%, #FE9D07 100%)',
           color: theme.palette.primary.dark,
       },
   },
